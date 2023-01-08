@@ -1,9 +1,9 @@
 import React from 'react'
 import './topbar.css'
-function topbar() {
+function Topbar() {
   return (
     <div>topbar</div>
   )
 }
 
-export default topbar
+export default Topbar
