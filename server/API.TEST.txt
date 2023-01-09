@@ -1,0 +1,16 @@
+[POST]  localhost:5000/api/auth/register
+{
+    "firstname":"nguyen",
+    "lastname":"nhan",
+    "email":"nhan.nguyentrong.dev@gmail.com",
+    "password":"0123456789",
+    "confirmPassword":"0123456789",
+    "mobile":"0356035625"
+}
+------------------------------------------------------------------------
+[POST]  localhost:5000/api/auth/login
+{
+    "email":"nhan.nguyentrong.dev@gmail.com",
+    "password":"0123456789"
+}
+------------------------------------------------------------------------
