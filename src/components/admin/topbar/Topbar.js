@@ -2,7 +2,11 @@ import React from 'react'
 import './topbar.css'
 function Topbar() {
   return (
-    <div>topbar</div>
+    <div className="topbar">
+      <div className="topbar-wrapper">
+
+      </div>
+    </div>
   )
 }
 
