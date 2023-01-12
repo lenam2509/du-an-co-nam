@@ -5,6 +5,7 @@ import Dashboard from './pages/admin/Dashboard/Dashboard'
 import Login from './pages/admin/Login'
 import Products from './pages/admin/Products/Products'
 import Home from './pages/client/Home'
+import './app.css'
 function App() {
     return (
         <>
