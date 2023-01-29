@@ -7,7 +7,6 @@ function AdminIndex() {
     return (
         <>
             <Topbar />
-
             <div className="container">
                 <Sidebar />
                 <div className="otherPages"><Outlet /></div>
