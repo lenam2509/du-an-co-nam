@@ -54,6 +54,11 @@
 header {
   width: 100%;
   background-color: #00c1d7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
 }
 
 .header-container {
@@ -118,7 +123,7 @@ header {
   justify-content: center;
   font-family: "Roboto", sans-serif;
 }
-.header-btn-diadiem svg{
+.header-btn-diadiem svg {
   font-size: 20px;
 }
 .header-btn-diadiem:hover {
@@ -156,4 +161,25 @@ header {
   height: 100%;
   padding: 0 10px;
   border-radius: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  header{
+    position: fixed;
+  }
+  .header-container {
+    width: 100%;
+  }
+  .header-btn-diadiem {
+    display: none;
+  }
+  .header-form form {
+    width: 60px;
+  }
+  .header-form form svg{
+    width: 15px;
+  }
+  .header-navbar a {
+    margin-right: 5px;
+  }
 }

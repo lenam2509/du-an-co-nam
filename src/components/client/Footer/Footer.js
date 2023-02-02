@@ -5,7 +5,7 @@ export default function Footer() {
     return (
         <div>
             <footer className="site-footer">
-                <div className="container">
+                <div className="footer-container">
                     <p className="copyright">Copyright &copy; 2023 Example Company</p>
                     <nav className="footer-nav">
                         <ul className="footer-menu">

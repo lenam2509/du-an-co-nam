@@ -1,21 +1,37 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import './header.css'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ListAlt, Room, SavedSearch, PhoneAndroid, LocalPhone, Receipt, ShoppingCart, Person } from '@mui/icons-material';
 export default function Header() {
     const [open, setOpen] = useState(false);
+    const [logo, setLogo] = useState("Fphone");
 
     const toggleOpen = () => {
         setOpen(!open);
     };
+
+    useEffect(() => {
+        function handleResize() {
+            if (window.innerWidth <= 767) {
+                setLogo("F");
+            } else {
+                setLogo("Fphone");
+            }
+        }
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     return (
         <div>
             <header className={`header ${open ? 'open' : ''}`}>
                 <div className="header-container">
                     <nav className="header-navbar">
-                        <Link to="/" className="header-logo">Fphone<PhoneAndroid /></Link>
+                        <Link to="/" className="header-logo">{
+                            logo
+                        }<PhoneAndroid /></Link>
                         <Link to='#' className="header-btn-danhmuc">
                             <ListAlt /><span>Danh mục</span>
                         </Link>
@@ -37,7 +53,7 @@ export default function Header() {
                         <Link to='#' className="header-btn-diadiem">
                             <Receipt /><span>Hóa đơn</span>
                         </Link>
-                        <Link to='#' className="header-btn-diadiem">
+                        <Link to='#' className="header-btn-danhmuc">
                             <ShoppingCart /><span>Giỏ hàng:0</span>
                         </Link>
                         <Link to='#' className="header-btn-diadiem">
