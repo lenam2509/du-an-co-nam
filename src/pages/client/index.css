@@ -1,7 +1,7 @@
 .main-content {
   margin: 70px auto 0 auto; /* trên phải dưới trái*/
   max-width: 1200px;
-  min-height: 200vh;
+  min-height: 250vh;
   background-color: #f5f5f5;
 }
 .box1 {
@@ -139,6 +139,102 @@
   background-color: rgb(198, 10, 9);
   color: #fff;
 }
+
+.box2-content {
+  padding: 10px 0;
+}
+
+.box3 {
+  width: 100%;
+  min-height: 350px;
+  margin-top: 20px;
+}
+.box3-title {
+  padding: 10px 0px 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.box3-title span {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: Roboto, sans-serif;
+}
+.box3-title ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.box3-title ul li {
+  margin-right: 10px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+  background-color: #ffffff;
+  color: #444;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.box3-content {
+  margin-top: 10px;
+}
+
+.box4 {
+  width: 100%;
+  min-height: 250px;
+  margin-top: 20px;
+}
+.box4-title {
+  display: flex;
+  justify-content: space-between;
+}
+.box4-title span {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: Roboto, sans-serif;
+  padding: 10px 0 0 10px;
+}
+.box4-title a {
+  text-decoration: none;
+  color: #444;
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+  padding: 10px 10px 0 0;
+  border-radius: 10px;
+}
+.box4-title a:hover {
+  text-decoration: underline;
+}
+.box4-content {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  position: relative;
+}
+.box4-item {
+  background: rgb(242, 131, 118)
+    url(https://cdn2.cellphones.com.vn/x/media/icons/category/cate-43.svg);
+  margin-left: 10px;
+  margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+.box4-item span {
+  color: #fff;
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+  margin-left: 5px;
+  margin-top: 10px;
+  display: block;
+  font-weight: 600;
+}
 /* mobile */
 
 @media screen and (max-width: 768px) {
@@ -186,5 +282,16 @@
   }
   .box2-title-image img {
     width: 100%;
+  }
+  .box3-title ul li {
+    margin-right: 10px;
+    cursor: pointer;
+    list-style: none;
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+    background-color: #ffffff;
+    color: #444;
+    border-radius: 10px;
+    padding: 5px 10px;
   }
 }

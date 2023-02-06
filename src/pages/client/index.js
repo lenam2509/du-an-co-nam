@@ -2,10 +2,14 @@ import { Link } from 'react-router-dom'
 import { NavigateNext, PhoneAndroid, Laptop, Tablet, Headphones } from '@mui/icons-material'
 import { Carousel } from 'react-responsive-carousel'
 import "react-responsive-carousel/lib/styles/carousel.min.css"
+
+import MultiCarousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import React from 'react'
 import './index.css'
 import CountDown from '../../components/client/Countdown/Countdown'
 
+import Productcard from '../../components/client/Product-card/Productcard'
 
 function ClientIndex() {
   const deadline = new Date("2023-02-14T00:00:00").getTime();
@@ -16,6 +20,25 @@ function ClientIndex() {
     '/images/baner4.png',
     '/images/baner5.png',
   ]
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 5
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
+  };
   const bannerright = [
     '/images/baner-right1.png',
     '/images/baner-right2.png',
@@ -111,12 +134,173 @@ function ClientIndex() {
           </div>
         </div>
         <div className="box2-content">
-          <div className="box2-content-item">
-            
-          </div>
+          <MultiCarousel responsive={responsive} autoPlay={true} infinite={true}>
+            <Productcard />
+            <Productcard />
+            <Productcard />
+            <Productcard />
+            <Productcard />
+            <Productcard />
+          </MultiCarousel>
         </div>
       </div>
-
+      <div className="box3">
+        <div className="box3-title">
+          <span> Điện thoại nổi bật nhất</span>
+          <ul>
+            <Link to='#'>
+              <li>Apple</li>
+            </Link>
+            <Link to='#'>
+              <li>Samsung</li>
+            </Link>
+            <Link to='#'>
+              <li>OPPO</li>
+            </Link>
+            <Link to='#'>
+              <li>Vivo</li>
+            </Link>
+            <Link to='#'>
+              <li>Nokia</li>
+            </Link>
+            <Link to='#'>
+              <li>Asus</li>
+            </Link>
+            <Link to='#'>
+              <li>Tecno</li>
+            </Link>
+            <Link to='#'>
+              <li>Tất cả</li>
+            </Link>
+          </ul>
+        </div>
+        <div className="box3-content">
+          <MultiCarousel responsive={responsive} autoPlay={true} infinite={true}>
+            <Productcard />
+            <Productcard />
+            <Productcard />
+            <Productcard />
+            <Productcard />
+            <Productcard />
+          </MultiCarousel>
+          <MultiCarousel responsive={responsive} autoPlay={true} infinite={true}>
+            <Productcard />
+            <Productcard />
+            <Productcard />
+            <Productcard />
+            <Productcard />
+            <Productcard />
+          </MultiCarousel>
+        </div>
+      </div>
+      <div className="box4">
+        <div className="box4-title">
+          <span> Phụ kiện</span>
+          <Link to='#'>Xem tất cả</Link>
+        </div>
+        <div className="box4-content">
+          <Link to='#'>
+            <div className="box4-item">
+              <span>Phụ kiện Aplle</span>
+            </div>
+          </Link>
+          <Link to='#'>
+            <div className="box4-item">
+              <span>Phụ kiện Aplle</span>
+            </div>
+          </Link>
+          <Link to='#'>
+            <div className="box4-item">
+              <span>Phụ kiện Aplle</span>
+            </div>
+          </Link>
+          <Link to='#'>
+            <div className="box4-item">
+              <span>Phụ kiện Aplle</span>
+            </div>
+          </Link>
+          <Link to='#'>
+            <div className="box4-item">
+              <span>Phụ kiện Aplle</span>
+            </div>
+          </Link>
+          <Link to='#'>
+            <div className="box4-item">
+              <span>Phụ kiện Aplle</span>
+            </div>
+          </Link>
+          <Link to='#'>
+            <div className="box4-item">
+              <span>Phụ kiện Aplle</span>
+            </div>
+          </Link>
+          <Link to='#'>
+            <div className="box4-item">
+              <span>Phụ kiện Aplle</span>
+            </div>
+          </Link>
+          <Link to='#'>
+            <div className="box4-item">
+              <span>Phụ kiện Aplle</span>
+            </div>
+          </Link>
+          <Link to='#'>
+            <div className="box4-item">
+              <span>Phụ kiện Aplle</span>
+            </div>
+          </Link>
+          <Link to='#'>
+            <div className="box4-item">
+              <span>Phụ kiện Aplle</span>
+            </div>
+          </Link>
+          <Link to='#'>
+            <div className="box4-item">
+              <span>Phụ kiện Aplle</span>
+            </div>
+          </Link>
+          <Link to='#'>
+            <div className="box4-item">
+              <span>Phụ kiện Aplle</span>
+            </div>
+          </Link>
+          <Link to='#'>
+            <div className="box4-item">
+              <span>Phụ kiện Aplle</span>
+            </div>
+          </Link>
+          <Link to='#'>
+            <div className="box4-item">
+              <span>Phụ kiện Aplle</span>
+            </div>
+          </Link>
+          <Link to='#'>
+            <div className="box4-item">
+              <span>Phụ kiện Aplle</span>
+            </div>
+          </Link>
+          <Link to='#'>
+            <div className="box4-item">
+              <span>Phụ kiện Aplle</span>
+            </div>
+          </Link>
+          <Link to='#'>
+            <div className="box4-item">
+              <span>Phụ kiện Aplle</span>
+            </div>
+          </Link>
+          <Link to='#'>
+            <div className="box4-item">
+              <span>Phụ kiện Aplle</span>
+            </div>
+          </Link>
+          <Link to='#'>
+            <div className="box4-item">
+              <span>Phụ kiện Aplle</span>
+            </div>
+          </Link>
+        </div>
+      </div>
     </div>
   )
 }
