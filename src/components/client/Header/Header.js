@@ -4,12 +4,12 @@ import './header.css'
 import { useState, useEffect } from 'react';
 import { ListAlt, Room, SavedSearch, PhoneAndroid, LocalPhone, Receipt, ShoppingCart, Person } from '@mui/icons-material';
 export default function Header() {
-    const [open, setOpen] = useState(false);
+    // const [open, setOpen] = useState(false);
     const [logo, setLogo] = useState("Fphone");
 
-    const toggleOpen = () => {
-        setOpen(!open);
-    };
+    // const toggleOpen = () => {
+    //     setOpen(!open);
+    // };
 
     useEffect(() => {
         function handleResize() {
@@ -26,7 +26,7 @@ export default function Header() {
 
     return (
         <div>
-            <header className={`header ${open ? 'open' : ''}`}>
+            <header className={`header`}>
                 <div className="header-container">
                     <nav className="header-navbar">
                         <Link to="/" className="header-logo">{
