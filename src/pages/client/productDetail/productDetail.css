@@ -1,0 +1,16 @@
+.product-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .product-image {
+    width: 50%;
+    margin: 20px;
+  }
+  
+  .product-description {
+    width: 50%;
+    text-align: center;
+  }
+  
