@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import { Link } from "react-router-dom";
 import "./footer.css";
@@ -22,9 +23,11 @@ export default function Footer() {
               <h3>Về chúng tôi</h3>
                 <Link href="#">
                   
-                  <p>Giới thiệu công ty</p>
-                  <p>Tuyển dụng</p>
-                  <p>Góp ý, khiếu nại</p>
+                  <div >
+                  <p id="about">Giới thiệu công ty</p>
+                  <p id="about">Tuyển dụng</p>
+                  <p id="about">Góp ý, khiếu nại</p>
+                  </div>
                   
                   
                 </Link>
@@ -42,9 +45,9 @@ export default function Footer() {
               <h3>Dịch vụ khách hàng</h3>
                 <Link href="#">
                   
-                  <p>FAQ</p>
-                  <p>Đổi trả</p>
-                  <p>Tra thông tin đơn hàng</p>
+                  <p id="about">FAQ</p>
+                  <p id="about">Đổi trả</p>
+                  <p id="about">Tra thông tin đơn hàng</p>
                 </Link>
               </li>
             </ul>

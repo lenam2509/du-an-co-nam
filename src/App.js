@@ -9,6 +9,8 @@ import './app.css'
 import Users from './pages/admin/Users/Users'
 import Wrapper from './components/client/Wrapper/Wrapper'
 import ClientProducts from './pages/client/Products/Products'
+import Cart from './pages/client/cart/cart'
+import ProductDetail from './pages/client/productDetail/productDetail'
 // import Header from './components/client/Header/Header'
 function App() {
     return (
@@ -18,6 +20,8 @@ function App() {
                     <Routes>
                         <Route path="/" exact element={<ClientIndex />} />
                         <Route path="/products" element={<ClientProducts />} />
+                        <Route path="/cart" element={<Cart/>} />
+                        <Route path="/productDetail" element={<ProductDetail/>} />
 
 
                         {/* bên admin */}
