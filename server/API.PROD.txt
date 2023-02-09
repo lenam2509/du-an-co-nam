@@ -1,0 +1,21 @@
+[POST]  https://fphone-api.vercel.app/api/auth/register
+{
+    "email":"nhan.nguyentrong.dev@gmail.com",
+    "password":"0123456789",
+    "confirmPassword":"0123456789",
+    "mobile":"0356035625"
+}
+------------------------------------------------------------------------
+[POST]  https://fphone-api.vercel.app/api/auth/login
+{
+    "email":"nhan.nguyentrong.dev@gmail.com",
+    "password":"0123456789"
+}
+------------------------------------------------------------------------
+[POST]  https://fphone-api.vercel.app/api/auth/admin-login
+{
+    "email":"nhan.nguyentrong.dev@gmail.com",
+    "password":"0123456789"
+}
+------------------------------------------------------------------------
+[GET]  https://fphone-api.vercel.app/api/auth/logout
