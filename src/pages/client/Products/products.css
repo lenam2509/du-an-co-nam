@@ -1,0 +1,225 @@
+.Products_container {
+  width: 1200px;
+  margin: 0 auto;
+  min-height: 200vh;
+  background-color: aliceblue;
+  margin-top: 70px;
+}
+
+/* hãng */
+.products_branch {
+  width: 100%;
+  min-height: 100px;
+}
+.products_branch_title {
+  font-style: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+.products_branch_items {
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+}
+.products_branch_items a {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 10px;
+  border: 1px solid black;
+}
+.products_branch_items a img {
+  width: 70px;
+  height: 20px;
+  margin: 0 10px;
+}
+/* nhu cầu */
+
+.products_nhucau {
+  width: 100%;
+  min-height: 200px;
+}
+.products_nhucau_title {
+  font-style: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+.products_nhucau_items {
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.products_nhucau_item {
+  width: 120px;
+  min-height: 120px;
+  background-color: #8e8181;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 100%;
+  margin: 10px 5px;
+}
+.products_nhucau_item span {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: white;
+  display: block;
+  padding: 5px;
+}
+
+/* sap xep theo */
+.products_sapxep_title {
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: black;
+  display: block;
+}
+.products_sapxep_items {
+  width: 100%;
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: flex-start;
+}
+.products_sapxep_items a {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  margin: 0 10px;
+  border: 1px solid black;
+  color: black;
+}
+.products_sapxep_items button {
+  background-color: white;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  margin: 0 10px;
+  border: 1px solid black;
+  color: black;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.products_sapxep_filter {
+  width: 800px;
+  min-height: 400px;
+  background-color: white;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  z-index: 100;
+  margin-left: 10px;
+  border-radius: 10px;
+  overflow-y: auto;
+}
+.products_sapxep_filter::after {
+  border-bottom: 10px solid #696969;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  content: "";
+  left: 800px;
+  top: 465px;
+  position: absolute;
+}
+.products_sapxep_filter_close {
+  display: none;
+}
+.filter_wraper {
+  width: 33%;
+}
+.filter_wraper ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+.filter_wraper ul li {
+  display: flex;
+  align-items: center;
+  margin: 5px 5px;
+  padding: 5px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+}
+.filter_title {
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: black;
+  display: block;
+  padding: 10px;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  /* mobile branch */
+  .Products_container {
+    width: 100%;
+  }
+  .products_branch {
+    width: 100%;
+    min-height: 100px;
+  }
+  .products_branch_items {
+    overflow: scroll;
+  }
+  .products_branch_items a {
+    padding: 5px;
+    margin: 0 5px;
+  }
+  .products_branch_items a img {
+    width: 50px;
+    height: 20px;
+    margin: 0 5px;
+  }
+  /* nhu cầu */
+  .products_nhucau {
+    width: 100%;
+    min-height: 200px;
+  }
+  .products_nhucau_items {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: scroll;
+  }
+  /* sap xep theo */
+  .products_sapxep_items {
+    overflow: scroll;
+  }
+  .products_sapxep_items a {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    font-family: "Roboto", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px;
+    margin: 0 5px;
+    border: 1px solid black;
+    color: black;
+  }
+  .products_sapxep_filter{
+    display: none;
+  }
+}
