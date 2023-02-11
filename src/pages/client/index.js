@@ -49,7 +49,7 @@ function ClientIndex() {
       <div className="box1">
         <div className="danhmuc">
           <ul>
-            <Link to='#'>
+            <Link to='/products'>
               <li> <PhoneAndroid className='danhmuc-icon' /> Điện thoại <NavigateNext className='NavigateNext' />
                 <div className="submenu1">
                   <ul>
