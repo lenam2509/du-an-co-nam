@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { TextRotateVertical, Visibility, AttachMoney, FilterAlt } from '@mui/icons-material'
 import './products.css'
+import ProductCard from '../../../components/client/Product-card/Productcard'
 function ClientProducts() {
     const [filter, setFilter] = React.useState(false)
 
@@ -187,7 +188,12 @@ function ClientProducts() {
 
             </div>
             <div className="products_list_all">
-                
+                 <ProductCard/>
+                 <ProductCard/>
+                 <ProductCard/>
+                 <ProductCard/>
+                 <ProductCard/>
+                 <ProductCard/>
             </div>
         </div>
     )

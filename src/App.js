@@ -9,6 +9,7 @@ import './app.css'
 import Users from './pages/admin/Users/Users'
 import Wrapper from './components/client/Wrapper/Wrapper'
 import ClientProducts from './pages/client/Products/Products'
+import AdminLogin from './pages/admin/Login/AdminLogin'
 // import Header from './components/client/Header/Header'
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
 
 
                         {/* bên admin */}
+                        <Route path="/admin/login" element={<AdminLogin />} />
                         <Route path="/admin" element={<AdminIndex />} >
                             {/* bên admin */}
                             <Route path="home" element={<Dashboard />} />

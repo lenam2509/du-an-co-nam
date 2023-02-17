@@ -4,6 +4,9 @@ import Sidebar from '../../components/admin/sidebar/Sidebar'
 import Topbar from '../../components/admin/topbar/Topbar'
 import './index.css'
 function AdminIndex() {
+    if (!localStorage.getItem('admin')) {
+        window.location.href = '/admin/login'
+    }
     return (
         <>
             <Topbar />
