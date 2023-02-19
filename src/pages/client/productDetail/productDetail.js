@@ -12,6 +12,7 @@ function ProductDetail() {
         </Link>
       </div>
       <div class="info-column">
+      {/* <div className="product-name">NokiaC21</div> */}
         <div className="productDetail-price">
           <p className="new-price">32.990.000đ</p>{" "}
           <p className="old-price">33.990.000đ</p>

@@ -19,6 +19,12 @@
   grid-column: 2 / 3;
   grid-gap: 10px;
 }
+
+.product-name{
+  float: left;
+  font-size: 20px;
+  width: 100%;
+}
 .productDetail-price {
   padding: 10px 0 0 10px;
   font-size: 14px;
@@ -27,6 +33,9 @@
   font-family: "Roboto", sans-serif;
   display: block;
   align-items: center;
+  overflow: hidden;
+  
+  width: 100%;
   
 }
 .productDetail-price .new-price {
@@ -34,12 +43,16 @@
   color: rgb(198, 10, 9);
   font-weight: 600;
   font-size: 18px;
+  float: left;
+  width: 60%;
 }
 .productDetail-price .old-price {
   text-decoration: line-through;
   color: #999;
   font-weight: 500;
   font-size: 12px;
+  float: left;
+  width: 40%;
 }
 .sub-column {
   width: 100%;
