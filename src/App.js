@@ -11,6 +11,7 @@ import Wrapper from './components/client/Wrapper/Wrapper'
 import ClientProducts from './pages/client/Products/Products'
 import Cart from './pages/client/cart/cart'
 import ProductDetail from './pages/client/productDetail/productDetail'
+import PaymentInfo from './pages/client/paymentInfo/paymentInfo'
 // import Header from './components/client/Header/Header'
 function App() {
     return (
@@ -22,6 +23,8 @@ function App() {
                         <Route path="/products" element={<ClientProducts />} />
                         <Route path="/cart" element={<Cart/>} />
                         <Route path="/productDetail" element={<ProductDetail/>} />
+                        <Route path="/payment" element={<PaymentInfo/>} />
+                        
 
 
                         {/* bên admin */}

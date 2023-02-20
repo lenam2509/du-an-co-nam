@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./cart.css";
 import DeleteIcon from "@mui/icons-material/Delete";
+import Products from "../../admin/Products/Products";
 
 function Cart() {
   return (
@@ -92,9 +93,13 @@ function Cart() {
             <div className="tong-tien-so"> 65.000.000đ</div>
           </div>
 
+          <Link to= ''>
           <button className="dat-hang">TIẾN HÀNH ĐẶT HÀNG</button>
+          </Link>
 
-          <button className="chon-them">CHỌN THÊM SẢN PHẨM KHÁC</button>
+          <Link to='/'>
+          <button className="chon-them" >CHỌN THÊM SẢN PHẨM KHÁC</button>
+          </Link>
         </div>
       </div>
       <div class="column right"></div>

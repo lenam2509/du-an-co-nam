@@ -8,9 +8,9 @@ export default function Wrapper({ children }) {
         <div>
             {!location.pathname.startsWith('/admin') && (
                 <>
-                    <Header />
+                    {/* <Header /> */}
                     {children}
-                    <Footer />
+                    {/* <Footer /> */}
                 </>
             )}
             {location.pathname.startsWith('/admin') && children}

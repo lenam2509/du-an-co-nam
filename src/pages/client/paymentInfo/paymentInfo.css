@@ -1,0 +1,149 @@
+.shopping-cart {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #999;
+    
+  }
+  
+  .column {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .left {
+    flex: 30%;
+    background-color: black;
+  }
+  
+  .middle {
+    flex: 40%;
+    background-color: #ddd;
+  }
+  
+  .cart-header {
+    overflow: hidden;
+  }
+  .muathem {
+    color: red;
+    font-weight: bold;
+    float: left;
+    width: 40%;
+    font-size: 16px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .cart-header p {
+    float: left;
+    width: 50%;
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .info-customer{
+    width: 100%;
+    display: flex;
+   
+  }
+
+  .customer-name{
+    width: 250%;
+    
+  }
+  .customer-phone{
+    width: 250%;
+    
+  }
+  .customer-email{
+    width: 250%;
+    
+  }
+  .cach-nhan-hang{
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+
+  .address{
+    width: 250%;
+  }
+
+  .other-requirements{
+    width: 250%;
+  }
+  
+  .total {
+    
+   margin-top: 15px;
+    box-sizing: border-box;
+  }
+  
+  .line4 {
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .tong-tien {
+    float: left;
+    width: 80%;
+    font-weight: bold;
+    
+  }
+  .tong-tien-so {
+    float: right;
+    width: 20%;
+   
+  }
+  .dat-hang {
+    width: 100%;
+    background-color: white;
+    color: red;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0.375rem 0.75rem;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  
+  .dat-hang:hover {
+    background-color: red;
+    color: white;
+    font-weight: bold;  
+  }
+  .chon-them {
+    width: 100%;
+    background-color: white;
+    color: red;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0.375rem 0.75rem;
+    text-align: center;
+  }
+  .chon-them:hover {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+  }
+  .right {
+    flex: 30%;
+    background-color: #f5f5f5;
+    background-color: black;
+  }
+  
+  @media (max-width: 768px) {
+    .column {
+      flex: 100%;
+    }
+  }
+  
