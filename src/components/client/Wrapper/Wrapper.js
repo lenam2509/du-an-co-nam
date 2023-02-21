@@ -10,7 +10,7 @@ export default function Wrapper({ children }) {
                 <>
                     {/* <Header /> */}
                     {children}
-                    {/* <Footer /> */}
+                    <Footer />
                 </>
             )}
             {location.pathname.startsWith('/admin') && children}
