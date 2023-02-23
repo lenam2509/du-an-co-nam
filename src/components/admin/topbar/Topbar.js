@@ -20,6 +20,7 @@ function Topbar() {
             <Settings />
           </div>
           <img className='topAvatar' src='https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-default-avatar-profile-icon-vector-social-media-user-image-vector-illustration-227787227.jpg' alt='' />
+          <button className='logout_btn'>Đăng xuất</button>
         </div>
       </div>
     </div>
