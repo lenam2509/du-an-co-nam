@@ -7,7 +7,6 @@ function AdminLogin() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const { isLoading } = useSelector(state => state.auth)
-    const { isAuthenticated } = useSelector(state => state.auth)
     const dispatch = useDispatch()
 
     const handleSubmit = (e) => {
