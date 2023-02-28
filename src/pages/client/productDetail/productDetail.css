@@ -5,6 +5,7 @@
   max-width: 1200px;
   margin: 0 auto;
   background-color: aliceblue;
+  margin-top: 100px;
   
 }
 
@@ -56,7 +57,7 @@
 }
 .sub-column {
   width: 100%;
-  flex-basis: 33.33%;
+  flex-basis: 33%;
   box-sizing: border-box;
   display: flex ;
   border-radius: 30px;
@@ -163,9 +164,10 @@ ul {
 
 
 
-
 @media (max-width: 768px) {
   .product-detail {
     grid-template-columns: 1fr;
   }
 }
+
+

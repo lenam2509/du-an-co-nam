@@ -1,7 +1,8 @@
 .shopping-cart {
     display: flex;
     flex-wrap: wrap;
-    background-color: #999;
+    background-color: white;
+    margin-top: 25px;
     
   }
   
@@ -13,12 +14,13 @@
   
   .left {
     flex: 30%;
-    background-color: black;
+    background-color: white;
   }
   
   .middle {
     flex: 40%;
     background-color: #ddd;
+    padding-left:  25px;
   }
   
   .cart-header {
@@ -28,14 +30,14 @@
     color: red;
     font-weight: bold;
     float: left;
-    width: 40%;
+    width: 30%;
     font-size: 16px;
     padding: 20px;
     box-sizing: border-box;
   }
   .cart-header p {
     float: left;
-    width: 50%;
+    width: 70%;
     color: red;
     font-weight: bold;
     font-size: 18px;
@@ -69,6 +71,7 @@
 
   .address{
     width: 250%;
+   
   }
 
   .other-requirements{
@@ -100,47 +103,26 @@
    
   }
   .dat-hang {
-    width: 100%;
-    background-color: white;
-    color: red;
-    font-weight: bold;
-    border-radius: 0.25rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    padding: 0.375rem 0.75rem;
-    text-align: center;
-    margin-bottom: 5px;
+    width: 97%;
   }
   
-  .dat-hang:hover {
-    background-color: red;
-    color: white;
-    font-weight: bold;  
-  }
+
   .chon-them {
-    width: 100%;
-    background-color: white;
-    color: red;
-    font-weight: bold;
-    border-radius: 0.25rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    padding: 0.375rem 0.75rem;
-    text-align: center;
+    width: 97%;
+    margin-bottom: 20px;
+   
   }
-  .chon-them:hover {
-    background-color: red;
-    color: white;
-    font-weight: bold;
+  .MuiFormControl-root {
+    margin-bottom: 1rem;
   }
   .right {
     flex: 30%;
-    background-color: #f5f5f5;
-    background-color: black;
+    background-color: white;
   }
   
+
+  
+
   @media (max-width: 768px) {
     .column {
       flex: 100%;

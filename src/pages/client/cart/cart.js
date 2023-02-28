@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 import "./cart.css";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Products from "../../admin/Products/Products";
-
+import { Button, Stack } from "@mui/material";
+import QuantityControl from "./QuantityControl";
 function Cart() {
   return (
     <div class="shopping-cart">
       <div class="column left"></div>
       <div class="column middle">
-        <div className="cart-header">
+        <div className="cart-header" direction='row'>
           <Link to="#" className="muathem">
             Trở về
           </Link>
@@ -18,7 +19,7 @@ function Cart() {
         <div className="product-item">
           <div className="product-item-image">
             <Link>
-              <img src="/public/images/nokiac21.png" alt="" />
+              <img src="../../../../public/images/nokiac22.png" alt="" />
             </Link>
           </div>
           <div className="product-item-info">
@@ -47,6 +48,8 @@ function Cart() {
                 <button class="decrease-quantity">-</button>
                 <input class="quantity-input" value="1" />
                 <button class="increase-quantity">+</button>
+
+                {/* <QuantityControl /> */}
               </div>
             </div>
           </div>
@@ -93,13 +96,16 @@ function Cart() {
             <div className="tong-tien-so"> 65.000.000đ</div>
           </div>
 
-          <Link to= ''>
-          <button className="dat-hang">TIẾN HÀNH ĐẶT HÀNG</button>
+          <Stack  >
+          <Link to= '../payment'>
+          <Button  className="dat-hang"  variant="contained" color="error"  >TIẾN HÀNH ĐẶT HÀNG</Button>
           </Link>
 
           <Link to='/'>
-          <button className="chon-them" >CHỌN THÊM SẢN PHẨM KHÁC</button>
+          <Button  className="chon-them"  variant="contained" color="info" style={{ marginTop:"10px " }}>CHỌN THÊM SẢN PHẨM KHÁC</Button>
           </Link>
+          </Stack>
+          
         </div>
       </div>
       <div class="column right"></div>

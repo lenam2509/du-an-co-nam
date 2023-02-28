@@ -1,21 +1,32 @@
-[POST]  localhost:5000/api/auth/register
+Check port trên máy tính để tránh crash CMD(Admin) -> nhập netstat -ano | find “5001” | find "LISTENING"
+
+[POST]  localhost:5001/api/auth/verify
 {
-    "email":"nhan.nguyentrong.dev@gmail.com",
-    "password":"0123456789",
-    "confirmPassword":"0123456789",
-    "mobile":"0356035625"
+    "email":"nhan.nguyentrong.dev@gmail.com"
+}
+
+[POST]  localhost:5001/api/auth/register
+{
+    "verifyCode": "Lấy trong mail",
+    "firstname": "Nguyễn Trọng",
+    "lastname": "Nhân",
+    "email": "nguyentrongnhan04072000@gmail.com",
+    "mobile": "0356035625",
+    "password": "1234567890",
+    "confirmPassword": "1234567890",
+    "address": "Đường số 3, cư xá Lữ Gia, phường 15, quận 11, HCMC"
 }
 ------------------------------------------------------------------------
-[POST]  localhost:5000/api/auth/login
+[POST]  localhost:5001/api/auth/login
 {
     "email":"nhan.nguyentrong.dev@gmail.com",
     "password":"0123456789"
 }
 ------------------------------------------------------------------------
-[POST]  localhost:5000/api/auth/admin-login
+[POST]  localhost:5001/api/auth/admin-login
 {
     "email":"nhan.nguyentrong.dev@gmail.com",
     "password":"0123456789"
 }
 ------------------------------------------------------------------------
-[GET]  localhost:5000/api/auth/logout
+[GET]  localhost:5001/api/auth/logout

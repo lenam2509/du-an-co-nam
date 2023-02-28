@@ -12,6 +12,7 @@ import ClientProducts from './pages/client/Products/Products'
 import Cart from './pages/client/cart/cart'
 import ProductDetail from './pages/client/productDetail/productDetail'
 import PaymentInfo from './pages/client/paymentInfo/paymentInfo'
+import AdminLogin from './pages/admin/Login/AdminLogin'
 // import Header from './components/client/Header/Header'
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
 
 
                         {/* bên admin */}
+                        <Route path="/admin/login" element={<AdminLogin />} />
                         <Route path="/admin" element={<AdminIndex />} >
                             {/* bên admin */}
                             <Route path="home" element={<Dashboard />} />

@@ -1,6 +1,8 @@
-const { register, login, logout, loginAdmin } = require('../controllers/authController')
+const { sendVerifyUser, register, login, logout, loginAdmin } = require('../controllers/authController')
 
 const router = require('express').Router()
+
+router.post('/verify', sendVerifyUser)
 
 router.post('/register', register)
 

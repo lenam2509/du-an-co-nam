@@ -1,7 +1,6 @@
 .shopping-cart {
   display: flex;
-  flex-wrap: wrap;
-  background-color: #999;
+  
   
 }
 
@@ -13,12 +12,16 @@
 
 .left {
   flex: 30%;
-  background-color: black;
+  background-color: #f5f5f5;
 }
 
 .middle {
+  margin-top: 50px;
   flex: 40%;
   background-color: #ddd;
+  border-radius: 30px;
+  border: 2px solid black;
+  background-clip: border-box;
 }
 
 .cart-header {
@@ -52,7 +55,6 @@
 .product-item-image {
   float: left;
   width: 25%;
-
   box-sizing: border-box;
   height: fit-content;
 }
@@ -167,44 +169,18 @@
 }
 .dat-hang {
   width: 100%;
-  background-color: white;
-  color: red;
-  font-weight: bold;
-  border-radius: 0.25rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  padding: 0.375rem 0.75rem;
-  text-align: center;
-  margin-bottom: 5px;
 }
 
-.dat-hang:hover {
-  background-color: red;
-  color: white;
-  font-weight: bold;
-}
+
 .chon-them {
   width: 100%;
-  background-color: white;
-  color: red;
-  font-weight: bold;
-  border-radius: 0.25rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  padding: 0.375rem 0.75rem;
-  text-align: center;
+
 }
-.chon-them:hover {
-  background-color: red;
-  color: white;
-  font-weight: bold;
-}
+
 .right {
   flex: 30%;
   background-color: #f5f5f5;
-  background-color: black;
+ 
 }
 
 @media (max-width: 768px) {

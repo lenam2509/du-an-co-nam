@@ -1,9 +1,18 @@
+[POST]  https://fphone-api.vercel.app/api/auth/verify
+{
+    "email":"nhan.nguyentrong.dev@gmail.com"
+}
+
 [POST]  https://fphone-api.vercel.app/api/auth/register
 {
-    "email":"nhan.nguyentrong.dev@gmail.com",
-    "password":"0123456789",
-    "confirmPassword":"0123456789",
-    "mobile":"0356035625"
+    "verifyCode": "Lấy trong mail",
+    "firstname": "Nguyễn Trọng",
+    "lastname": "Nhân",
+    "email": "nguyentrongnhan04072000@gmail.com",
+    "mobile": "0356035625",
+    "password": "1234567890",
+    "confirmPassword": "1234567890",
+    "address": "Đường số 3, cư xá Lữ Gia, phường 15, quận 11, HCMC"
 }
 ------------------------------------------------------------------------
 [POST]  https://fphone-api.vercel.app/api/auth/login

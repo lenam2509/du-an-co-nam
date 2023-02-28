@@ -1,8 +1,10 @@
 import React from "react";
 import ProductCard from "../../../components/client/Product-card/Productcard";
 import "./productDetail.css";
-import MultiCarousel from "react-multi-carousel";
+import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import Alert from "@mui/material/Alert/Alert";
+import {Grid,Card, CardMedia, CardContent, Typography, ButtonGroup} from "@mui/material";
 function ProductDetail() {
   return (
     <div class="product-detail">
@@ -12,7 +14,7 @@ function ProductDetail() {
         </Link>
       </div>
       <div class="info-column">
-      {/* <div className="product-name">NokiaC21</div> */}
+      <div className="product-name">NokiaC21</div>
         <div className="productDetail-price">
           <p className="new-price">32.990.000đ</p>{" "}
           <p className="old-price">33.990.000đ</p>
@@ -20,22 +22,24 @@ function ProductDetail() {
         <div className="sub-column1"></div>
         <div className="sub-column1"></div>
 
+       
         <a href="#" className="sub-column">
-          <strong>16GB 1TB</strong>
-          <span>32.990.000 đ</span>
-        </a>
-        <a href="#" className="sub-column">
+        
           <strong>8GB 512GB</strong>
           <span>26.390.000 đ</span>
+          
         </a>
         <a href="#" className="sub-column">
           <strong>6GB 256GB</strong>
           <span>23.390.000 đ</span>
         </a>
-        <button class="order-button">
-          <strong>MUA NGAY</strong>
-          <span>(Giao tận nơi hoặc lấy tại cửa hàng)</span>{" "}
-        </button>
+
+        
+        
+        <Button class="order-button" >
+        <strong>MUA NGAY</strong>
+          <span>(Giao tận nơi hoặc lấy tại cửa hàng)</span>
+        </Button>
         <button class="tragop-button">
           <strong class="has-text-white">
             TRẢ GÓP <span>0%</span>
@@ -58,8 +62,13 @@ function ProductDetail() {
           <li>Độ phân giải màn hình 720 x 1600 pixel</li>
         </ul>
       </div>
+   
+
     </div>
+ 
   );
 }
 
 export default ProductDetail;
+
+
