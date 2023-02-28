@@ -5,7 +5,7 @@ export const Login = (email, password) => async (dispatch) => {
         dispatch(LoginStart());
         const res = await AuthApi.login({ email, password });
         dispatch(LoginSuccess(res.data));
-        window.location.href = "/admin";
+        // window.location.href = "/admin";
     } catch (error) {
         dispatch(LoginFail(error.response.data));
     }
