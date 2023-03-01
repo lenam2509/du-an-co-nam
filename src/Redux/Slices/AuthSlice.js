@@ -25,7 +25,7 @@ const authSlice = createSlice({
             state.token = null
             state.isAuthenticated = false
             state.isLoading = false
-            state.error = action.payload
+            state.error = action.payload.error
         },
         Logout(state) {
             state.user = null
