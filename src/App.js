@@ -19,7 +19,9 @@ function App() {
                     <Routes>
                         <Route path="/" exact element={<ClientIndex />} />
                         <Route path="/products" element={<ClientProducts />} />
-
+                        <Route path="/cart" element={<Cart/>} />
+                        <Route path="/productDetail" element={<ProductDetail/>} />
+                        <Route path="/payment" element={<PaymentInfo/>} />
 
                         {/* bên admin */}
                         <Route path="/admin/login" element={<AdminLogin />} />

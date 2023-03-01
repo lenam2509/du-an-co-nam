@@ -1,0 +1,131 @@
+.shopping-cart {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    margin-top: 25px;
+    
+  }
+  
+  .column {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .left {
+    flex: 30%;
+    background-color: white;
+  }
+  
+  .middle {
+    flex: 40%;
+    background-color: #ddd;
+    padding-left:  25px;
+  }
+  
+  .cart-header {
+    overflow: hidden;
+  }
+  .muathem {
+    color: red;
+    font-weight: bold;
+    float: left;
+    width: 30%;
+    font-size: 16px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .cart-header p {
+    float: left;
+    width: 70%;
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .info-customer{
+    width: 100%;
+    display: flex;
+   
+  }
+
+  .customer-name{
+    width: 250%;
+    
+  }
+  .customer-phone{
+    width: 250%;
+    
+  }
+  .customer-email{
+    width: 250%;
+    
+  }
+  .cach-nhan-hang{
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+
+  .address{
+    width: 250%;
+   
+  }
+
+  .other-requirements{
+    width: 250%;
+  }
+  
+  .total {
+    
+   margin-top: 15px;
+    box-sizing: border-box;
+  }
+  
+  .line4 {
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .tong-tien {
+    float: left;
+    width: 80%;
+    font-weight: bold;
+    
+  }
+  .tong-tien-so {
+    float: right;
+    width: 20%;
+   
+  }
+  .dat-hang {
+    width: 97%;
+  }
+  
+
+  .chon-them {
+    width: 97%;
+    margin-bottom: 20px;
+   
+  }
+  .MuiFormControl-root {
+    margin-bottom: 1rem;
+  }
+  .right {
+    flex: 30%;
+    background-color: white;
+  }
+  
+
+  
+
+  @media (max-width: 768px) {
+    .column {
+      flex: 100%;
+    }
+  }
+  

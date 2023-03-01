@@ -53,7 +53,7 @@ export default function Header() {
                         <Link to='#' className="header-btn-diadiem">
                             <Receipt /><span>Hóa đơn</span>
                         </Link>
-                        <Link to='#' className="header-btn-danhmuc">
+                        <Link to='cart' className="header-btn-danhmuc">
                             <ShoppingCart /><span>Giỏ hàng:0</span>
                         </Link>
                         <Link to='#' className="header-btn-diadiem">
