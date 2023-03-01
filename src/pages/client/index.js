@@ -11,7 +11,7 @@ import CountDown from '../../components/client/Countdown/Countdown'
 import Productcard from '../../components/client/Product-card/Productcard'
 
 function ClientIndex() {
-  const deadline = new Date("2023-02-14T00:00:00").getTime();
+  const deadline = new Date("2023-03-14T00:00:00").getTime();
   const images = [
     '/images/baner1.png',
     '/images/baner2.png',
@@ -133,7 +133,7 @@ function ClientIndex() {
           </div>
         </div>
         <div className="box2-content">
-          <MultiCarousel responsive={responsive} autoPlay={true} infinite={true}>
+          <MultiCarousel responsive={responsive} autoPlay={true} infinite={true} >
             <Productcard />
             <Productcard />
             <Productcard />
