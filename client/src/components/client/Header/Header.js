@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { ListAlt, Room, SavedSearch, PhoneAndroid, LocalPhone, Receipt, ShoppingCart, Person } from '@mui/icons-material';
 export default function Header() {
     // const [open, setOpen] = useState(false);
-    const [logo, setLogo] = useState("Fphone");
+    const [logo, setLogo] = useState("FPhone");
 
     // const toggleOpen = () => {
     //     setOpen(!open);
@@ -16,7 +16,7 @@ export default function Header() {
             if (window.innerWidth <= 767) {
                 setLogo("F");
             } else {
-                setLogo("Fphone");
+                setLogo("FPhone");
             }
         }
 

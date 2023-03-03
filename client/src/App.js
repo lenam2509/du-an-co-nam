@@ -13,6 +13,7 @@ import AdminLogin from './pages/admin/Login/AdminLogin'
 import ClientProduct from './pages/client/Products/Product'
 import UserLogin from './pages/client/Auth/UserLogin'
 import UserRegister from './pages/client/Auth/UserRegister'
+import Cart from './pages/client/Cart/Cart'
 
 // import Header from './components/client/Header/Header'
 function App() {
@@ -26,6 +27,7 @@ function App() {
                         <Route path="/product/:id" element={<ClientProduct />} />
                         <Route path='/login' element={<UserLogin />}></Route>
                         <Route path='/register' element={<UserRegister />}></Route>
+                        <Route path='/cart' element={<Cart />}></Route>
                         {/* bên admin */}
                         <Route path="/admin/login" element={<AdminLogin />} />
                         <Route path="/admin" element={<AdminIndex />} >
