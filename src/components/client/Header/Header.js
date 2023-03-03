@@ -56,7 +56,7 @@ export default function Header() {
                         <Link to='cart' className="header-btn-danhmuc">
                             <ShoppingCart /><span>Giỏ hàng:0</span>
                         </Link>
-                        <Link to='#' className="header-btn-diadiem">
+                        <Link to='/login' className="header-btn-diadiem">
                             <Person /><span>Đăng nhập</span>
                         </Link>
                     </nav>

@@ -15,3 +15,13 @@ export const logout = () => async (dispatch) => {
     dispatch(Logout());
     window.location.href = "/admin/login";
 }
+
+export const register = (user) => async (dispatch) => {
+    try {
+        const res = await AuthApi.register(user);
+        dispatch(LoginSuccess(res.data));
+        window.location.href = "/login";
+    } catch (error) {
+        dispatch(LoginFail(error.response.data));
+    }
+}

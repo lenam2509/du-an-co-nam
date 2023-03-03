@@ -10,6 +10,9 @@ import Users from './pages/admin/Users/Users'
 import Wrapper from './components/client/Wrapper/Wrapper'
 import ClientProducts from './pages/client/Products/Products'
 import AdminLogin from './pages/admin/Login/AdminLogin'
+import ClientProduct from './pages/client/Products/Product'
+import UserLogin from './pages/client/Auth/UserLogin'
+import UserRegister from './pages/client/Auth/UserRegister'
 
 // import Header from './components/client/Header/Header'
 function App() {
@@ -20,7 +23,9 @@ function App() {
                     <Routes>
                         <Route path="/" exact element={<ClientIndex />} />
                         <Route path="/products" element={<ClientProducts />} />
-                     
+                        <Route path="/product/:id" element={<ClientProduct />} />
+                        <Route path='/login' element={<UserLogin />}></Route>
+                        <Route path='/register' element={<UserRegister />}></Route>
                         {/* bên admin */}
                         <Route path="/admin/login" element={<AdminLogin />} />
                         <Route path="/admin" element={<AdminIndex />} >
