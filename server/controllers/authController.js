@@ -63,6 +63,7 @@ exports.login = asyncHandler(async (req, res) => {
             lastname: findUser?.lastname,
             email: findUser?.email,
             mobile: findUser?.mobile,
+            role: findUser?.role,
             token: generateToken(findUser?._id),
         })
     } else {
@@ -87,6 +88,7 @@ exports.loginAdmin = asyncHandler(async (req, res) => {
             lastname: findAdmin?.lastname,
             email: findAdmin?.email,
             mobile: findAdmin?.mobile,
+            role: findAdmin?.role,
             token: generateToken(findAdmin?._id),
         })
     } else {
@@ -113,5 +115,40 @@ exports.logout = asyncHandler(async (req, res) => {
       httpOnly: true,
       secure: true,
     })
-    res.sendStatus(204) // forbidden
+    res.json({ msg: 'Đăng xuất thành công!' })
+})
+
+exports.updateUser = asyncHandler(async (req, res) => {
+    const { _id } = req.user
+    if (Object.keys(req.body).length === 0) throw new Error('Vui lòng nhập đầy đủ thông tin!')
+    const updatedUser = await User.findByIdAndUpdate(_id, req.body, { new: true })
+    res.json(updatedUser)
+})
+
+exports.updateRoleUserByAdmin = asyncHandler(async (req, res) => {
+    const { id } = req.params
+    const updatedRoleUser = await User.findByIdAndUpdate(id, { role: req.body?.role }, { new: true })
+    res.json({ 
+        msg: 'Cập nhật phân quyền thành công!',
+        updatedRoleUser
+    })
+})
+
+exports.deleteUser = asyncHandler(async (req, res) => {
+    const { id } = req.params
+    await User.findByIdAndDelete(id)
+    res.json({ msg: 'Xóa người dùng thành công!' })
+})
+
+exports.changePasswordUser = asyncHandler(async (req, res) => {
+    const { _id } = req.user
+    const user = await User.findById(_id).select('+password')
+    const isPasswordMatched = await user.isPasswordMatched(req.body.oldPassword)
+    if (Object.keys(req.body).length === 0) throw new Error('Vui lòng nhập đầy đủ thông tin!')
+    if (!isPasswordMatched) throw new Error('Mật khẩu cũ không đúng')
+    if (req.body.newPassword !== req.body.confirmPassword) throw new Error('Mật khẩu của 2 trường không khớp')
+    user.password = req.body.newPassword
+    user.confirmPassword = req.body.confirmPassword
+    await user.save()
+    res.json({ msg: 'Đổi mật khẩu thành công!' })
 })

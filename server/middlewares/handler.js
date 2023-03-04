@@ -1,7 +1,7 @@
 // not Found
 
 const notFound = (req, res, next) => {
-    const error = new Error(`Khong tim thay : ${req.originalUrl}`);
+    const error = new Error(`Không tìm thấy : ${req.originalUrl}`);
     res.status(404);
     next(error);
   };

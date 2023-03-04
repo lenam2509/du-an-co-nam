@@ -11,7 +11,7 @@ Check port trên máy tính để tránh crash CMD(Admin) -> nhập netstat -ano
     "firstname": "Nguyễn Trọng",
     "lastname": "Nhân",
     "email": "nguyentrongnhan04072000@gmail.com",
-    "mobile": "0356035625",
+    "mobile": "0356035628",
     "password": "1234567890",
     "confirmPassword": "1234567890",
     "address": "Đường số 3, cư xá Lữ Gia, phường 15, quận 11, HCMC"
@@ -19,14 +19,36 @@ Check port trên máy tính để tránh crash CMD(Admin) -> nhập netstat -ano
 ------------------------------------------------------------------------
 [POST]  localhost:5001/api/auth/login
 {
-    "email":"nhan.nguyentrong.dev@gmail.com",
+    "email":"nguyentrongnhan04072000@gmail.com",
     "password":"0123456789"
 }
 ------------------------------------------------------------------------
 [POST]  localhost:5001/api/auth/admin-login
 {
     "email":"nhan.nguyentrong.dev@gmail.com",
-    "password":"0123456789"
+    "password":"1234567890"
 }
 ------------------------------------------------------------------------
 [GET]  localhost:5001/api/auth/logout
+------------------------------------------------------------------------
+[PUT]  localhost:5001/api/auth
+{
+    "firstname": "Nguyễn Trọng",
+    "lastname": "Nhân 2",
+    "mobile": "0356035625",
+    "address": "Đường số 3, cư xá Lữ Gia, phường 15, quận 11, HCMC"
+}
+------------------------------------------------------------------------
+[PUT]  localhost:5001/api/auth/role/:id
+{
+    "role": "Admin"
+}
+------------------------------------------------------------------------
+[PUT]  localhost:5001/api/auth/password
+{
+    "oldPassword": "1234567890",
+    "newPassword": "0987654321",
+    "confirmPassword": "0987654321"
+}
+------------------------------------------------------------------------
+[DELETE]  localhost:5001/api/auth/:id

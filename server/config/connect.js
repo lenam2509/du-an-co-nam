@@ -1,10 +1,12 @@
 const mongoose = require('mongoose')
 
+mongoose.set('strictQuery', false)
+
 exports.dbConnect = () => {
     try {
         mongoose.connect(process.env.DB_URI)
-        console.log('Ket noi DB thanh cong')
+        console.log('Kết nối DB thành công!')
     } catch (error) {
-        console.log('Khong the ket noi den DB')
+        console.log('Không thể kết nối đến DB')
     }
 }

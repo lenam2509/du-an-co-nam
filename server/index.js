@@ -28,5 +28,5 @@ app.use(notFound)
 app.use(errorHandler)
 
 app.listen(PORT, () => {
-  console.log(`Server dang chay tai dia chi http://localhost:${PORT}`)
+  console.log(`Server đang chạy tại địa chỉ http://localhost:${PORT}`)
 })

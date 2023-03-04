@@ -14,10 +14,10 @@ exports.authMiddleware = asyncHandler(async (req, res, next) => {
                 next()
             }
         } catch (error) {
-            throw new Error("Token da het han, vui long dang nhap lai")
+            throw new Error("Phiên đăng nhập đã hết hạn!")
         }
     } else {
-        throw new Error("Ban chua truyen token vao headers")
+        throw new Error("Vui lòng đăng nhập để sử dụng tính năng này")
     }
 })
 
@@ -25,7 +25,7 @@ exports.isAdmin = asyncHandler(async (req, res, next) => {
     const { email } = req.user
     const adminUser = await User.findOne({ email })
     if (adminUser.role !== 'Admin') {
-        throw new Error("Ban khong phai la quan tri vien")
+        throw new Error("Yêu cầu quyền admin để truy cập vào tài nguyên này")
     } else {
         next()
     }
