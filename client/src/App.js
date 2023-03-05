@@ -14,7 +14,6 @@ import ClientProduct from './pages/client/Products/Product'
 import UserLogin from './pages/client/Auth/UserLogin'
 import UserRegister from './pages/client/Auth/UserRegister'
 import Cart from './pages/client/Cart/Cart'
-
 // import Header from './components/client/Header/Header'
 function App() {
     return (
@@ -22,6 +21,8 @@ function App() {
             <BrowserRouter>
                 <Wrapper>
                     <Routes>
+                        {/* bên client */}
+                       
                         <Route path="/" exact element={<ClientIndex />} />
                         <Route path="/products" element={<ClientProducts />} />
                         <Route path="/product/:id" element={<ClientProduct />} />

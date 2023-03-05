@@ -3,18 +3,27 @@ import './adminlogin.css'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Login } from '../../../Redux/Actions/AuthAction'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function AdminLogin() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const { isLoading } = useSelector(state => state.auth)
+    const { error } = useSelector(state => state.auth)
     const dispatch = useDispatch()
 
     const handleSubmit = (e) => {
         e.preventDefault()
         dispatch(Login(email, password))
+        if (error) {
+            toast.error(error.message)
+        } else if (email === '' || password === '') {
+            toast.error('Điền đầy đủ thông tin')
+        }
     }
     return (
         <div className='admin_login_container'>
+            <ToastContainer />
             <div className="admin_login">
                 <h1>Admin Login</h1>
                 <form onSubmit={handleSubmit}>

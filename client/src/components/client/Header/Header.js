@@ -2,15 +2,21 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import './header.css'
 import { useState, useEffect } from 'react';
-import { ListAlt, Room, SavedSearch, PhoneAndroid, LocalPhone, Receipt, ShoppingCart, Person } from '@mui/icons-material';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { userLogout } from '../../../Redux/Actions/AuthAction';
+import { ListAlt, Room, SavedSearch, PhoneAndroid, LocalPhone, Receipt, ShoppingCart, Person, Logout } from '@mui/icons-material';
 export default function Header() {
     // const [open, setOpen] = useState(false);
     const [logo, setLogo] = useState("FPhone");
-
+    const dispatch = useDispatch();
     // const toggleOpen = () => {
     //     setOpen(!open);
     // };
-
+    const { user } = useSelector(state => state.auth);
+    const logout = () => {
+        dispatch(userLogout());
+    }
     useEffect(() => {
         function handleResize() {
             if (window.innerWidth <= 767) {
@@ -56,9 +62,21 @@ export default function Header() {
                         <Link to='cart' className="header-btn-danhmuc">
                             <ShoppingCart /><span>Giỏ hàng:0</span>
                         </Link>
-                        <Link to='/login' className="header-btn-diadiem">
-                            <Person /><span>Đăng nhập</span>
-                        </Link>
+                        {
+                            user ?
+                                <Link to='/profile' className="header-btn-danhmuc">
+                                    <Person /><span>{user.lastname}</span>
+                                </Link>
+                                :
+                                <Link to='/login' className="header-btn-danhmuc">
+                                    <Person /><span>Đăng nhập</span>
+                                </Link>
+                        }
+                        {
+                            user ? <Link onClick={logout} className="header-btn-danhmuc">
+                                <Logout /><span>Đăng xuất</span>
+                            </Link> : ''
+                        }
                     </nav>
                 </div>
             </header>
