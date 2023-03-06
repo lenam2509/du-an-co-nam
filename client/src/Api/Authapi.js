@@ -5,8 +5,16 @@ const AuthApi = {
         const url = "/auth/admin-login";
         return AxiosClient.post(url, data);
     },
+    UserLogin: (data) => {
+        const url = "/auth/login";
+        return AxiosClient.post(url, data);
+    },
     register: (data) => {
         const url = "/auth/register";
+        return AxiosClient.post(url, data);
+    },
+    verify: (data) => {
+        const url = "/auth/verify";
         return AxiosClient.post(url, data);
     },
 }

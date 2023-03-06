@@ -12,25 +12,25 @@ export default function Footer() {
             <ul className="footer-menu">
               <li className="footer-menu-item">
               <h3>Thông tin liên hệ</h3>
-                <Link href="#">
+                
                   
-                  <p>Phone: (123) 456-7890</p>
-                  <p>Email:cskhFphone@.com</p>
+                  <p> <a href="">Tìm cửa hàng gần nhất</a> </p>
+                  <p>Email:cskhFphone@.com </p>
                   <p>Địa chỉ: 123 Nguyễn Đình Chiểu, Phường 6, Quận 3, Tp Hồ Chí Minh</p>
-                </Link>
+                
               </li>
               <li className="footer-menu-item">
               <h3>Về chúng tôi</h3>
-                <Link href="#">
+                
                   
                   <div >
-                  <p id="about">Giới thiệu công ty</p>
-                  <p id="about">Tuyển dụng</p>
-                  <p id="about">Góp ý, khiếu nại</p>
+                  <p id="about"><Link>Giới thiệu công ty</Link></p>
+                  <p id="job"><Link>Tuyển dụng</Link></p>
+                  <p id="contact"><Link>Góp ý, khiếu nại</Link></p>
                   </div>
                   
                   
-                </Link>
+                
               </li>
               <li className="footer-menu-item">
               <h3>Tổng đài hỗ trợ (Miễn phí gọi) </h3>
@@ -43,12 +43,13 @@ export default function Footer() {
               </li>
               <li className="footer-menu-item">
               <h3>Dịch vụ khách hàng</h3>
-                <Link href="#">
+                
                   
-                  <p id="about">FAQ</p>
-                  <p id="about">Đổi trả</p>
-                  <p id="about">Tra thông tin đơn hàng</p>
-                </Link>
+                  <p id="FAQ">
+                  <Link>FAQ</Link></p>
+                  <p id="return"> <Link>Đổi trả</Link></p>
+                  <p id="order-detail"> <Link>Tra thông tin đơn hàng</Link></p>
+                
               </li>
             </ul>
 
