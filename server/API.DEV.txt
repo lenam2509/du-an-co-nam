@@ -1,11 +1,11 @@
 Check port trên máy tính để tránh crash CMD(Admin) -> nhập netstat -ano | find “5001” | find "LISTENING"
 
-[POST]  localhost:5001/api/auth/verify  
+[POST]  localhost:5001/api/auth/verify
 {
     "email":"nhan.nguyentrong.dev@gmail.com"
 }
-
-[POST]  localhost:5001/api/auth/register 
+------------------------------------------------------------------------
+[POST]  localhost:5001/api/auth/register
 {
     "verifyCode": "Lấy trong mail",
     "firstname": "Nguyễn Trọng",
@@ -17,21 +17,21 @@ Check port trên máy tính để tránh crash CMD(Admin) -> nhập netstat -ano
     "address": "Đường số 3, cư xá Lữ Gia, phường 15, quận 11, HCMC"
 }
 ------------------------------------------------------------------------
-[POST]  localhost:5001/api/auth/login 
+[POST]  localhost:5001/api/auth/login
 {
     "email":"nguyentrongnhan04072000@gmail.com",
     "password":"0123456789"
 }
 ------------------------------------------------------------------------
-[POST]  localhost:5001/api/auth/admin-login 
+[POST]  localhost:5001/api/auth/admin-login
 {
     "email":"nhan.nguyentrong.dev@gmail.com",
     "password":"1234567890"
 }
 ------------------------------------------------------------------------
-[GET]  localhost:5001/api/auth/logout 
+[GET]  localhost:5001/api/auth/logout
 ------------------------------------------------------------------------
-[PUT]  localhost:5001/api/auth 
+[PUT]  localhost:5001/api/auth
 {
     "firstname": "Nguyễn Trọng",
     "lastname": "Nhân 2",
@@ -39,25 +39,33 @@ Check port trên máy tính để tránh crash CMD(Admin) -> nhập netstat -ano
     "address": "Đường số 3, cư xá Lữ Gia, phường 15, quận 11, HCMC"
 }
 ------------------------------------------------------------------------
-[GET]  localhost:5001/api/auth 
+[GET]  localhost:5001/api/auth
 ------------------------------------------------------------------------
-[PUT]  localhost:5001/api/auth/role/:id 
+[PUT]  localhost:5001/api/auth/role/:id
 {
     "role": "Admin"
 }
 ------------------------------------------------------------------------
-[PUT]  localhost:5001/api/auth/password 
+[PUT]  localhost:5001/api/auth/password
 {
     "oldPassword": "1234567890",
     "newPassword": "0987654321",
     "confirmPassword": "0987654321"
 }
 ------------------------------------------------------------------------
-[DELETE]  localhost:5001/api/auth/:id 
+[DELETE]  localhost:5001/api/auth/:id
 ------------------------------------------------------------------------
-[POST]  localhost:5001/api/auth/forgot-password 
+[POST]  localhost:5001/api/auth/forgot-password
 {
     "email": "nguyentrongnhan04072000@gmail.com"
+}
+------------------------------------------------------------------------
+[POST]  localhost:5001/api/auth/reset-password
+{
+    "verifyCode": "Lấy trong mail",
+    "email": "nguyentrongnhan04072000@gmail.com",
+    "newPassword": "95147536",
+    "confirmPassword": "95147536"
 }
 ------------------------------------------------------------------------
 [GET]  localhost:5001/api/auth/users

@@ -1,4 +1,4 @@
-const { sendVerifyUser, deleteUser, register, login, logout, loginAdmin, updateUser, updateRoleUserByAdmin, changePasswordUser, getCurrentUser, getAllUsers, forgotPassword } = require('../controllers/authController')
+const { sendVerifyUser, deleteUser, register, login, logout, loginAdmin, updateUser, updateRoleUserByAdmin, changePasswordUser, getCurrentUser, getAllUsers, forgotPassword, resetPassword } = require('../controllers/authController')
 const { authMiddleware, isAdmin } = require('../middlewares/auth')
 
 const router = require('express').Router()
@@ -12,6 +12,8 @@ router.post('/login', login)
 router.post('/admin-login', loginAdmin)
 
 router.post('/forgot-password', forgotPassword)
+
+router.post('/reset-password', resetPassword)
 
 router.put('/', authMiddleware, updateUser)
 
