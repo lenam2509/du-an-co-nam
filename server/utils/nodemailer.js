@@ -61,4 +61,19 @@ const htmlSignupAccount = (token) => {
     </div>`
 }
 
-module.exports = { sendEmail, htmlSignupAccount }
+const htmlResetPassword = (token) => {
+  return `<div>
+    ${headerHtmlMail}
+    <h2 style="padding: 10px 0; margin-bottom: 10px;">
+        Xin chào anh (chị),<br />
+        Cửa hàng Fphone Store đã nhận được yêu cầu lấy lại mật khẩu từ quý khách.<br />
+        Đừng lo lắng, hãy nhập mã này để khôi phục:
+    </h2>
+    <h1 style="background: #eee;padding: 10px;">
+      <i><b>${token}</b></i>
+    </h1>
+    ${footerHtmlVerifyMail}
+  </div>`
+}
+
+module.exports = { sendEmail, htmlSignupAccount, htmlResetPassword }

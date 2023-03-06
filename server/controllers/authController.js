@@ -3,7 +3,7 @@ const Verify = require('../models/verifyModel')
 const asyncHandler = require('express-async-handler')
 const { generateRefreshToken, generateToken } = require('../utils/jwt')
 const { generateVerifyCode, isVerifyEmail } = require('../middlewares/verify')
-const { sendEmail, htmlSignupAccount } = require('../utils/nodemailer')
+const { sendEmail, htmlSignupAccount, htmlResetPassword } = require('../utils/nodemailer')
 
 exports.sendVerifyUser = asyncHandler(async (req, res) => {
     const { email } = req.body
@@ -22,7 +22,7 @@ exports.sendVerifyUser = asyncHandler(async (req, res) => {
         dateCreated: Date.now()
     })
     const result = await sendEmail(mail)
-    if (result) return res.status(200).json({ message: 'success' })
+    if (result) return res.status(200).json({ message: 'Gửi mail xác thực thành công. Vui lòng kiểm tra lại email' })
 })
 
 exports.register = asyncHandler(async (req, res) => {
@@ -98,7 +98,7 @@ exports.loginAdmin = asyncHandler(async (req, res) => {
 
 exports.logout = asyncHandler(async (req, res) => {
     const cookie = req.cookies
-    if (!cookie?.refreshToken) throw new Error('Không có Refresh Token trong Cookies này')
+    if (!cookie?.refreshToken) throw new Error('Không có Refresh Token hoặc đã đăng xuất trước đó trong Cookies này')
     const refreshToken = cookie.refreshToken
     const user = await User.findOne({ refreshToken })
     if (!user) {
@@ -106,7 +106,7 @@ exports.logout = asyncHandler(async (req, res) => {
         httpOnly: true,
         secure: true,
       })
-      return res.sendStatus(204) // forbidden
+      return res.sendStatus(204)
     }
     await User.findOneAndUpdate(refreshToken, {
       refreshToken: '',
@@ -151,4 +151,39 @@ exports.changePasswordUser = asyncHandler(async (req, res) => {
     user.confirmPassword = req.body.confirmPassword
     await user.save()
     res.json({ msg: 'Đổi mật khẩu thành công!' })
+})
+
+exports.getCurrentUser = asyncHandler(async (req, res) => {
+    const { _id } = req.user
+    const currentUser = await User.findById(_id).select('-_id -isBlocked -password -confirmPassword -refreshToken -createdAt -updatedAt')
+    res.json(currentUser)
+})
+
+exports.getAllUsers = asyncHandler(async (req, res) => {
+    const allUsers = await User.find().select('-_id -isBlocked -password -confirmPassword -cart -refreshToken -createdAt -updatedAt')
+    res.json(allUsers)
+})
+
+exports.forgotPassword = asyncHandler(async (req, res) => {
+    const { email } = req.body
+    const user = await User.findOne({ email })
+    if (!user) throw new Error('Người dùng không tồn tại')
+    const verifyCode = generateVerifyCode(6)
+    const mail = {
+        to: email,
+        subject: 'Thay đổi mật khẩu',
+        html: htmlResetPassword(verifyCode)
+    }
+    await Verify.findOneAndDelete({ email })
+    await Verify.create({
+        code: verifyCode,
+        email,
+        dateCreated: Date.now()
+    })
+    const result = await sendEmail(mail)
+    if (result) {
+        res.status(200).json({ message: 'Gửi mail yêu cầu đổi mật khẩu thành công. Vui lòng kiểm tra lại email' })
+    } else {
+        res.json({ message: 'Gửi email thất bại!' })
+    }
 })
