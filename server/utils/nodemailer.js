@@ -12,7 +12,7 @@ const option = {
 
 const transporter = nodemailer.createTransport(option)
 
-const sendEmail = async ({ to, subject, text, html, ...rest }) => {
+exports.sendEmail = async ({ to, subject, text, html, ...rest }) => {
     try {
       const res = await transporter.verify()
       if (res) {
@@ -46,7 +46,7 @@ const footerHtmlVerifyMail = `<h3 style="color: red">
     </h3>
     <h1>Xin trân trọng cảm ơn.</h1>`
 
-const htmlSignupAccount = (token) => {
+exports.htmlSignupAccount = (token) => {
     return `<div>
         ${headerHtmlMail}
         <h2 style="padding: 10px 0; margin-bottom: 10px;">
@@ -61,13 +61,13 @@ const htmlSignupAccount = (token) => {
     </div>`
 }
 
-const htmlResetPassword = (token) => {
+exports.htmlResetPassword = (token) => {
   return `<div>
     ${headerHtmlMail}
     <h2 style="padding: 10px 0; margin-bottom: 10px;">
         Xin chào anh (chị),<br />
         Cửa hàng Fphone Store đã nhận được yêu cầu lấy lại mật khẩu từ quý khách.<br />
-        Đừng lo lắng, hãy nhập mã này để khôi phục:
+        Quý khách vui lòng nhập mã xác nhận này để khôi phục tài khoản:
     </h2>
     <h1 style="background: #eee;padding: 10px;">
       <i><b>${token}</b></i>
@@ -75,5 +75,3 @@ const htmlResetPassword = (token) => {
     ${footerHtmlVerifyMail}
   </div>`
 }
-
-module.exports = { sendEmail, htmlSignupAccount, htmlResetPassword }

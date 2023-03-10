@@ -187,3 +187,18 @@ exports.forgotPassword = asyncHandler(async (req, res) => {
         res.json({ message: 'Gửi email thất bại!' })
     }
 })
+
+exports.resetPassword = asyncHandler(async (req, res) => {
+    const { email, verifyCode } = req.body
+    const user = await User.findOne({ email })
+    if (Object.keys(req.body).length === 0) throw new Error('Vui lòng nhập đầy đủ thông tin!')
+    if(!user) throw new Error('Email không tồn tại!')
+    if (req.body.newPassword !== req.body.confirmPassword) throw new Error('Mật khẩu của 2 trường không khớp')
+    const isVerify = await isVerifyEmail(email, verifyCode)
+    if (!isVerify) throw new Error('Mã xác nhận không hợp lệ.')
+    user.password = req.body.newPassword
+    user.confirmPassword = req.body.confirmPassword
+    await user.save()
+    await Verify.deleteOne({ email })
+    res.json({ msg: 'Đổi mật khẩu thành công!' })
+})

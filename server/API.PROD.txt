@@ -1,9 +1,9 @@
-[POST]  https://fphone-api.vercel.app/api/auth/verify  
+[POST]  https://fphone-api.vercel.app/api/auth/verify
 {
     "email":"nhan.nguyentrong.dev@gmail.com"
 }
-
-[POST]  https://fphone-api.vercel.app/api/auth/register 
+------------------------------------------------------------------------
+[POST]  https://fphone-api.vercel.app/api/auth/register
 {
     "verifyCode": "Lấy trong mail",
     "firstname": "Nguyễn Trọng",
@@ -15,21 +15,21 @@
     "address": "Đường số 3, cư xá Lữ Gia, phường 15, quận 11, HCMC"
 }
 ------------------------------------------------------------------------
-[POST]  https://fphone-api.vercel.app/api/auth/login 
+[POST]  https://fphone-api.vercel.app/api/auth/login
 {
     "email":"nguyentrongnhan04072000@gmail.com",
     "password":"0123456789"
 }
 ------------------------------------------------------------------------
-[POST]  https://fphone-api.vercel.app/api/auth/admin-login 
+[POST]  https://fphone-api.vercel.app/api/auth/admin-login
 {
     "email":"nhan.nguyentrong.dev@gmail.com",
     "password":"1234567890"
 }
 ------------------------------------------------------------------------
-[GET]  https://fphone-api.vercel.app/api/auth/logout 
+[GET]  https://fphone-api.vercel.app/api/auth/logout
 ------------------------------------------------------------------------
-[PUT]  https://fphone-api.vercel.app/api/auth 
+[PUT]  https://fphone-api.vercel.app/api/auth
 {
     "firstname": "Nguyễn Trọng",
     "lastname": "Nhân 2",
@@ -37,25 +37,33 @@
     "address": "Đường số 3, cư xá Lữ Gia, phường 15, quận 11, HCMC"
 }
 ------------------------------------------------------------------------
-[GET]  https://fphone-api.vercel.app/api/auth 
+[GET]  https://fphone-api.vercel.app/api/auth
 ------------------------------------------------------------------------
-[PUT]  https://fphone-api.vercel.app/api/auth/role/:id 
+[PUT]  https://fphone-api.vercel.app/api/auth/role/:id
 {
     "role": "Admin"
 }
 ------------------------------------------------------------------------
-[PUT]  https://fphone-api.vercel.app/api/auth/password 
+[PUT]  https://fphone-api.vercel.app/api/auth/password
 {
     "oldPassword": "1234567890",
     "newPassword": "0987654321",
     "confirmPassword": "0987654321"
 }
 ------------------------------------------------------------------------
-[DELETE]  https://fphone-api.vercel.app/api/auth/:id 
+[DELETE]  https://fphone-api.vercel.app/api/auth/:id
 ------------------------------------------------------------------------
-[POST]  https://fphone-api.vercel.app/api/auth/forgot-password 
+[POST]  https://fphone-api.vercel.app/api/auth/forgot-password
 {
     "email": "nguyentrongnhan04072000@gmail.com"
+}
+------------------------------------------------------------------------
+[POST]  https://fphone-api.vercel.app/api/auth/reset-password
+{
+    "verifyCode": "Lấy trong mail",
+    "email": "nguyentrongnhan04072000@gmail.com",
+    "newPassword": "95147536",
+    "confirmPassword": "95147536"
 }
 ------------------------------------------------------------------------
 [GET]  https://fphone-api.vercel.app/api/auth/users
