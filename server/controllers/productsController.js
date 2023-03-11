@@ -1,62 +1,49 @@
+const uploadCloud = require('../config/cloudinary.config');
 const { Products, Brands, Specs } = require('../models/productsModel');
+const cloudinary = require('cloudinary').v2;
 
-module.exports = {
-    addProduct: async (req, res) => {
-        try {
-            const newProduct = new Products(req.body);
-            await newProduct.save();
-            res.status(200).json({ msg: 'Thêm sản phẩm thành công' });
-        } catch (error) {
-            return res.status(500).json({ msg: error.message });
-        }
-    },
-    getProducts: async (req, res) => {
-        try {
-            const products = await Products.find().populate('brand');
-            
-            res.json(products);
-        } catch (error) {
-            return res.status(500).json({ msg: error.message });
-        }
-    },
-    updateProduct: async (req, res) => {
-        const { name, price, brand, colors, image, description, specs } = req.body;
-        try {
-            const product = await Product.findById(req.params.id);
-            if (!product) return res.status(400).json({ msg: 'Sản phẩm không tồn tại' });
-            await Product.findOneAndUpdate({ _id: req.params.id }, {
-                name: name ? name : product.name,
-                price: price ? price : product.price,
-                brand: brand ? brand : product.brand,
-                colors: colors ? colors : product.colors,
-                image: image ? image : product.image,
-                description: description ? description : product.description,
-                specs: specs ? specs : product.specs
-            });
-            res.json({ msg: 'Cập nhật sản phẩm thành công' });
-        } catch (error) {
-            return res.status(500).json({ msg: error.message });
-        }
-    },
-    deleteProduct: async (req, res) => {
+exports.addProduct = async (req, res, next) => {
+    try {
+        const { name, price, brand, colors, description, specs } = req.body;
+        const fileData = req.file;
+        console.log(fileData);
+        const image = fileData.path;
+        const newProduct = await Products.create({ name, price, brand, colors, image, description, specs, imagePublicId: fileData.filename });
+        res.status(201).json({ newProduct });
+    } catch (error) {
+        // remove image from cloudinary
+        if (req.file) {
+            await cloudinary.uploader.destroy(req.file.filename);
 
-    },
-    // brands
-    addBrand: async (req, res) => {
-        try {
-            const newBrand = new Brands(req.body);
-            await newBrand.save();
-            res.status(200).json({ msg: 'Thêm thương hiệu thành công' });
-        } catch (error) {
-            return res.status(500).json({ msg: error.message });
         }
-    },
-    getBrands: async (req, res) => {
-        try {
-            const brands = await Brands.find();
-            res.json(brands);
-        } catch (error) {
-            return res.status(500).json({ msg: error.message });
+        return res.status(500).json({ error: error.message });
+    }
+}
+
+exports.getProducts = async (req, res, next) => {
+    try {
+        const products = await Products.find().populate('brand').populate('specs');
+        res.status(200).json({ products });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+}
+
+exports.deleteProduct = async (req, res, next) => {
+    try {
+        const { id } = req.params;
+        const product = await Products.findByIdAndDelete(id);
+        if (!product) {
+            return res.status(404).json({ error: 'Product not found' });
         }
-    },
+        // remove image from cloudinary
+        await cloudinary.uploader.destroy(product.imagePublicId);
+        res.status(200).json('Product deleted');
+    } catch (error) {
+        next(error);
+    }
+}
+
+exports.updateProduct = async (req, res, next) => {
+   
 }
