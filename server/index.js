@@ -7,7 +7,7 @@ const morgan = require('morgan')
 const cors = require('cors')
 
 const authRouter = require('./routes/authRoute')
-const productsRouter = require('./routes/productsRoute')
+const productRouter = require('./routes/productRoute')
 const { dbConnect } = require('./config/connect')
 const { notFound, errorHandler } = require('./middlewares/handler')
 
@@ -22,9 +22,8 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 
-// routes
 app.use('/api/auth', authRouter)
-app.use('/api/products', productsRouter)
+app.use('/api/product', productRouter)
 
 app.use(notFound)
 app.use(errorHandler)
