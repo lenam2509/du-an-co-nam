@@ -77,7 +77,7 @@ const SingleProduct = () => {
             <div className="main-product-details">
               <div className="border-bottom">
                 <h3 className="title">
-                  Kids Headphones Bulk 10 Pack Multi Colored For Students
+                Sản phẩm cho trẻ em
                 </h3>
               </div>
               <div className="border-bottom py-3">
@@ -90,35 +90,35 @@ const SingleProduct = () => {
                     edit={false}
                     activeColor="#ffd700"
                   />
-                  <p className="mb-0 t-review">( 2 Reviews )</p>
+                  <p className="mb-0 t-review">( 2 Nhận xét )</p>
                 </div>
                 <a className="review-btn" href="#review">
-                  Write a Review
+                  Viết đánh giá
                 </a>
               </div>
               <div className=" py-3">
                 <div className="d-flex gap-10 align-items-center my-2">
-                  <h3 className="product-heading">Type :</h3>
-                  <p className="product-data">Watch</p>
+                  <h3 className="product-heading">Kiểu :</h3>
+                  <p className="product-data">Đồng hồ</p>
                 </div>
                 <div className="d-flex gap-10 align-items-center my-2">
-                  <h3 className="product-heading">Brand :</h3>
-                  <p className="product-data">Havells</p>
+                  <h3 className="product-heading">Thương hiệu :</h3>
+                  <p className="product-data">Thương hiệu của sản phẩm</p>
                 </div>
                 <div className="d-flex gap-10 align-items-center my-2">
-                  <h3 className="product-heading">Category :</h3>
-                  <p className="product-data">Watch</p>
+                  <h3 className="product-heading">Loại :</h3>
+                  <p className="product-data">Đồng hồ</p>
                 </div>
                 <div className="d-flex gap-10 align-items-center my-2">
-                  <h3 className="product-heading">Tags :</h3>
-                  <p className="product-data">Watch</p>
+                  <h3 className="product-heading">Nhãn :</h3>
+                  <p className="product-data">Đồng hồ</p>
                 </div>
                 <div className="d-flex gap-10 align-items-center my-2">
-                  <h3 className="product-heading">Availablity :</h3>
-                  <p className="product-data">In Stock</p>
+                  <h3 className="product-heading">Khả dụng :</h3>
+                  <p className="product-data">Trong kho</p>
                 </div>
                 <div className="d-flex gap-10 flex-column mt-2 mb-3">
-                  <h3 className="product-heading">Size :</h3>
+                  <h3 className="product-heading">Kích thước :</h3>
                   <div className="d-flex flex-wrap gap-15">
                     <span className="badge border border-1 bg-white text-dark border-secondary">
                       S
@@ -135,11 +135,11 @@ const SingleProduct = () => {
                   </div>
                 </div>
                 <div className="d-flex gap-10 flex-column mt-2 mb-3">
-                  <h3 className="product-heading">Color :</h3>
+                  <h3 className="product-heading">Màu :</h3>
                   <Color />
                 </div>
                 <div className="d-flex align-items-center gap-15 flex-row mt-2 mb-3">
-                  <h3 className="product-heading">Quantity :</h3>
+                  <h3 className="product-heading">Số lượng :</h3>
                   <div className="">
                     <input
                       type="number"
@@ -158,33 +158,32 @@ const SingleProduct = () => {
                       data-bs-target="#staticBackdrop"
                       type="button"
                     >
-                      Add to Cart
+                      Thêm vào giỏ hàng
                     </button>
-                    <button className="button signup">Buy It Now</button>
+                    <button className="button signup">Mua ngay</button>
                   </div>
                 </div>
                 <div className="d-flex align-items-center gap-15">
                   <div>
                     <a href="">
-                      <TbGitCompare className="fs-5 me-2" /> Add to Compare
+                      <TbGitCompare className="fs-5 me-2" />Thêm vào so sánh
                     </a>
                   </div>
                   <div>
                     <a href="">
-                      <AiOutlineHeart className="fs-5 me-2" /> Add to Wishlist
+                      <AiOutlineHeart className="fs-5 me-2" /> Thêm vào danh sách yêu thích
                     </a>
                   </div>
                 </div>
                 <div className="d-flex gap-10 flex-column  my-3">
-                  <h3 className="product-heading">Shipping & Returns :</h3>
+                  <h3 className="product-heading">Vận chuyển : Trả hàng</h3>
                   <p className="product-data">
-                    Free shipping and returns available on all orders! <br /> We
-                    ship all US domestic orders within
-                    <b>5-10 business days!</b>
+                    Miễn phí vẫn chuyển cho đơn hàng 300k <br /> Giao hàng từ 5 - 10 ngày
+                  
                   </p>
                 </div>
                 <div className="d-flex gap-10 align-items-center my-3">
-                  <h3 className="product-heading">Product Link:</h3>
+                  <h3 className="product-heading">Liên kết sản phẩm:</h3>
                   <a
                     href="javascript:void(0);"
                     onClick={() => {
@@ -193,7 +192,7 @@ const SingleProduct = () => {
                       );
                     }}
                   >
-                    Copy Product Link
+                    Sao chép đường dẫn sản phẩm
                   </a>
                 </div>
               </div>
@@ -204,7 +203,7 @@ const SingleProduct = () => {
       <Container class1="description-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-12">
-            <h4>Description</h4>
+            <h4>Mô tả</h4>
             <div className="bg-white p-3">
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -219,11 +218,11 @@ const SingleProduct = () => {
       <Container class1="reviews-wrapper home-wrapper-2">
         <div className="row">
           <div className="col-12">
-            <h3 id="review">Reviews</h3>
+            <h3 id="review">Nhận xét</h3>
             <div className="review-inner-wrapper">
               <div className="review-head d-flex justify-content-between align-items-end">
                 <div>
-                  <h4 className="mb-2">Customer Reviews</h4>
+                  <h4 className="mb-2">Phản hồi khách hàng</h4>
                   <div className="d-flex align-items-center gap-10">
                     <ReactStars
                       count={5}
@@ -232,19 +231,19 @@ const SingleProduct = () => {
                       edit={false}
                       activeColor="#ffd700"
                     />
-                    <p className="mb-0">Based on 2 Reviews</p>
+                    <p className="mb-0">Dựa trên 2 đánh giá</p>
                   </div>
                 </div>
                 {orderedProduct && (
                   <div>
                     <a className="text-dark text-decoration-underline" href="">
-                      Write a Review
+                     Viết đánh giá
                     </a>
                   </div>
                 )}
               </div>
               <div className="review-form py-4">
-                <h4>Write a Review</h4>
+                <h4>Viết đánh giá</h4>
                 <form action="" className="d-flex flex-column gap-15">
                   <div>
                     <ReactStars
@@ -266,14 +265,14 @@ const SingleProduct = () => {
                     ></textarea>
                   </div>
                   <div className="d-flex justify-content-end">
-                    <button className="button border-0">Submit Review</button>
+                    <button className="button border-0">Gửi đánh giá</button>
                   </div>
                 </form>
               </div>
               <div className="reviews mt-4">
                 <div className="review">
                   <div className="d-flex gap-10 align-items-center">
-                    <h6 className="mb-0">Navdeep</h6>
+                    <h6 className="mb-0">Điều hướng sâu</h6>
                     <ReactStars
                       count={5}
                       size={24}
@@ -298,7 +297,7 @@ const SingleProduct = () => {
       <Container class1="popular-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-12">
-            <h3 className="section-heading">Our Popular Products</h3>
+            <h3 className="section-heading">Sản phẩm phổ biến của chúng tôi</h3>
           </div>
         </div>
         <div className="row">
@@ -331,19 +330,19 @@ const SingleProduct = () => {
                   <img src={watch} className="img-fluid" alt="product imgae" />
                 </div>
                 <div className="d-flex flex-column flex-grow-1 w-50">
-                  <h6 className="mb-3">Apple Watch</h6>
-                  <p className="mb-1">Quantity: asgfd</p>
-                  <p className="mb-1">Color: asgfd</p>
-                  <p className="mb-1">Size: asgfd</p>
+                  <h6 className="mb-3">Đồng hồ Apple</h6>
+                  <p className="mb-1">Số lượng: asgfd</p>
+                  <p className="mb-1">Màu: asgfd</p>
+                  <p className="mb-1">Kích thước: asgfd</p>
                 </div>
               </div>
             </div>
             <div className="modal-footer border-0 py-0 justify-content-center gap-30">
               <button type="button" className="button" data-bs-dismiss="modal">
-                View My Cart
+                Xem giỏ hàng của bạn
               </button>
               <button type="button" className="button signup">
-                Checkout
+                Thủ tục thanh toán
               </button>
             </div>
             <div className="d-flex justify-content-center py-3">
@@ -354,7 +353,7 @@ const SingleProduct = () => {
                   closeModal();
                 }}
               >
-                Continue To Shopping
+                Tiếp tục mua sắm
               </Link>
             </div>
           </div>

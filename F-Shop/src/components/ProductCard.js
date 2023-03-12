@@ -42,7 +42,7 @@ const ProductCard = (props) => {
           <div className="product-details">
             <h6 className="brand">Havels</h6>
             <h5 className="product-title">
-              Kids headphones bulk 10 pack multi colored for students
+              Tai nghe cho trẻ em nhiều màu
             </h5>
             <ReactStars
               count={5}
@@ -52,10 +52,7 @@ const ProductCard = (props) => {
               activeColor="#ffd700"
             />
             <p className={`description ${grid === 12 ? "d-block" : "d-none"}`}>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti quos
-              dolores et quas molestias excepturi sint occaecati cupiditate non
-              provident, similique sunt...
+              Mô tả 
             </p>
             <p className="price">$100.00</p>
           </div>
@@ -99,9 +96,9 @@ const ProductCard = (props) => {
             <img src={watch2} className="img-fluid" alt="product image" />
           </div>
           <div className="product-details">
-            <h6 className="brand">Havels</h6>
+            <h6 className="brand">Thương hiệu sản phẩm</h6>
             <h5 className="product-title">
-              Kids headphones bulk 10 pack multi colored for students
+            Tai nghe trẻ em số lượng lớn 10 gói nhiều màu cho học sinh
             </h5>
             <ReactStars
               count={5}
@@ -111,10 +108,7 @@ const ProductCard = (props) => {
               activeColor="#ffd700"
             />
             <p className={`description ${grid === 12 ? "d-block" : "d-none"}`}>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti quos
-              dolores et quas molestias excepturi sint occaecati cupiditate non
-              provident, similique sunt...
+                 Mô tả sản phẩm
             </p>
             <p className="price">$100.00</p>
           </div>

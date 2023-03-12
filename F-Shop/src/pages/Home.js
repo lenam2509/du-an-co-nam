@@ -20,10 +20,10 @@ const Home = () => {
                 alt="main banner"
               />
               <div className="main-banner-content position-absolute">
-                <h4>SUPERCHARGED FOR PROS.</h4>
+                <h4>Thiết kế chuyên nghiệp</h4>
                 <h5>iPad S13+ Pro.</h5>
-                <p>From $999.00 or $41.62/mo.</p>
-                <Link className="button">BUY NOW</Link>
+                <p>Từ $999.00 hoặc $41.62/mo.</p>
+                <Link className="button">MUA NGAY</Link>
               </div>
             </div>
           </div>
@@ -36,10 +36,10 @@ const Home = () => {
                   alt="main banner"
                 />
                 <div className="small-banner-content position-absolute">
-                  <h4>Best Sake</h4>
+                  <h4>Best iPab</h4>
                   <h5>iPad S13+ Pro.</h5>
                   <p>
-                    From $999.00 <br /> or $41.62/mo.
+                    Từ $999.00 <br /> hoặc $41.62/mo.
                   </p>
                 </div>
               </div>
@@ -50,10 +50,10 @@ const Home = () => {
                   alt="main banner"
                 />
                 <div className="small-banner-content position-absolute">
-                  <h4>NEW ARRIVAL</h4>
-                  <h5>But IPad Air</h5>
+                  <h4>Hàng mới về</h4>
+                  <h5>IPad Air</h5>
                   <p>
-                    From $999.00 <br /> or $41.62/mo.
+                    Từ $999.00 <br /> hoặc $41.62/mo.
                   </p>
                 </div>
               </div>
@@ -64,10 +64,10 @@ const Home = () => {
                   alt="main banner"
                 />
                 <div className="small-banner-content position-absolute">
-                  <h4>NEW ARRIVAL</h4>
-                  <h5>But IPad Air</h5>
+                  <h4>Hàng mới về</h4>
+                  <h5>IPad Air</h5>
                   <p>
-                    From $999.00 <br /> or $41.62/mo.
+                    Từ $999.00 <br /> Hoặc $41.62/mo.
                   </p>
                 </div>
               </div>
@@ -78,10 +78,10 @@ const Home = () => {
                   alt="main banner"
                 />
                 <div className="small-banner-content position-absolute">
-                  <h4>NEW ARRIVAL</h4>
-                  <h5>But IPad Air</h5>
+                  <h4>Hàng mới về</h4>
+                  <h5>IPad Air</h5>
                   <p>
-                    From $999.00 <br /> or $41.62/mo.
+                    Từ $999.00 <br /> Hoặc $41.62/mo.
                   </p>
                 </div>
               </div>
@@ -115,56 +115,56 @@ const Home = () => {
               <div className="d-flex gap align-items-center">
                 <div>
                   <h6>Music & Gaming</h6>
-                  <p>10 Items</p>
+                  <p>10 mặt hàng</p>
                 </div>
                 <img src="images/camera.jpg" alt="camera" />
               </div>
               <div className="d-flex gap align-items-center">
                 <div>
                   <h6>Cameras</h6>
-                  <p>10 Items</p>
+                  <p>10 mặt hàng</p>
                 </div>
                 <img src="images/camera.jpg" alt="camera" />
               </div>
               <div className="d-flex gap align-items-center">
                 <div>
-                  <h6>Smart Tv</h6>
-                  <p>10 Items</p>
+                  <h6>TV thông minh</h6>
+                  <p>10 mặt hàng</p>
                 </div>
                 <img src="images/tv.jpg" alt="camera" />
               </div>
               <div className="d-flex gap align-items-center">
                 <div>
-                  <h6>Smart Watches</h6>
-                  <p>10 Items</p>
+                  <h6>Đồng hồ thông minh</h6>
+                  <p>10 mặt hàng</p>
                 </div>
                 <img src="images/headphone.jpg" alt="camera" />
               </div>
               <div className="d-flex gap align-items-center">
                 <div>
                   <h6>Music & Gaming</h6>
-                  <p>10 Items</p>
+                  <p>10 mặt hàng</p>
                 </div>
                 <img src="images/camera.jpg" alt="camera" />
               </div>
               <div className="d-flex gap align-items-center">
                 <div>
                   <h6>Cameras</h6>
-                  <p>10 Items</p>
+                  <p>10 mặt hàng</p>
                 </div>
                 <img src="images/camera.jpg" alt="camera" />
               </div>
               <div className="d-flex gap align-items-center">
                 <div>
-                  <h6>Smart Tv</h6>
-                  <p>10 Items</p>
+                  <h6>TV thông minh</h6>
+                  <p>10 mặt hàng</p>
                 </div>
                 <img src="images/tv.jpg" alt="camera" />
               </div>
               <div className="d-flex gap align-items-center">
                 <div>
-                  <h6>Smart Watches</h6>
-                  <p>10 Items</p>
+                  <h6>Đồng hồ thông minh</h6>
+                  <p>10 mặt hàng</p>
                 </div>
                 <img src="images/headphone.jpg" alt="camera" />
               </div>
@@ -175,7 +175,7 @@ const Home = () => {
       <Container class1="featured-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-12">
-            <h3 className="section-heading">Featured Collection</h3>
+            <h3 className="section-heading">Bộ sưu tập nổi bật</h3>
           </div>
           <ProductCard />
           <ProductCard />
@@ -194,9 +194,9 @@ const Home = () => {
                 alt="famous"
               />
               <div className="famous-content position-absolute">
-                <h5>Big Screen</h5>
-                <h6>Smart Watch Series 7</h6>
-                <p>From $399or $16.62/mo. for 24 mo.*</p>
+                <h5>Màn hình lớn</h5>
+                <h6>Đồng hồ thông mình 7th</h6>
+                <p>Từ $399or $16.62/mo. Cho 24 mo.*</p>
               </div>
             </div>
           </div>
@@ -208,9 +208,9 @@ const Home = () => {
                 alt="famous"
               />
               <div className="famous-content position-absolute">
-                <h5 className="text-dark">Studio Display</h5>
-                <h6 className="text-dark">600 nits of brightness.</h6>
-                <p className="text-dark">27-inch 5K Retina display</p>
+                <h5 className="text-dark">Công nghệ màn hình</h5>
+                <h6 className="text-dark">600 nits</h6>
+                <p className="text-dark">27-inch</p>
               </div>
             </div>
           </div>
@@ -222,10 +222,10 @@ const Home = () => {
                 alt="famous"
               />
               <div className="famous-content position-absolute">
-                <h5 className="text-dark">smartphones</h5>
-                <h6 className="text-dark">Smartphone 13 Pro.</h6>
+                <h5 className="text-dark">Điện thoại thông mình</h5>
+                <h6 className="text-dark">Iphone 13 Pro.</h6>
                 <p className="text-dark">
-                  Now in Green. From $999.00 or $41.62/mo. for 24 mo. Footnote*
+                    Màu xanh lá $399 hoặc $16.62
                 </p>
               </div>
             </div>
@@ -238,10 +238,10 @@ const Home = () => {
                 alt="famous"
               />
               <div className="famous-content position-absolute">
-                <h5 className="text-dark">home speakers</h5>
-                <h6 className="text-dark">Room-filling sound.</h6>
+                <h5 className="text-dark">Loa</h5>
+                <h6 className="text-dark">Âm thanh tốt</h6>
                 <p className="text-dark">
-                  From $699 or $116.58/mo. for 12 mo.*
+                Từ $399or $16.62/mo. Cho 24 mo.*
                 </p>
               </div>
             </div>
@@ -252,7 +252,7 @@ const Home = () => {
       <Container class1="special-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-12">
-            <h3 className="section-heading">Special Products</h3>
+            <h3 className="section-heading">Sản phẩm nổi bật</h3>
           </div>
         </div>
         <div className="row">
@@ -265,7 +265,7 @@ const Home = () => {
       <Container class1="popular-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-12">
-            <h3 className="section-heading">Our Popular Products</h3>
+            <h3 className="section-heading">Sản phẩm phổ biến của chúng tôi</h3>
           </div>
         </div>
         <div className="row">
@@ -313,7 +313,7 @@ const Home = () => {
       <Container class1="blog-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-12">
-            <h3 className="section-heading">Our Latest Blogs</h3>
+            <h3 className="section-heading">Blogs mới nhất của chúng tôi</h3>
           </div>
         </div>
         <div className="row">

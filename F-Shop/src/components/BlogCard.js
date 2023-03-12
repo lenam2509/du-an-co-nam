@@ -9,13 +9,12 @@ const BlogCard = () => {
       </div>
       <div className="blog-content">
         <p className="date">1 Dec, 2022</p>
-        <h5 className="title">A beautiful sunday morning renaissance</h5>
+        <h5 className="title">Chúc bạn 1 ngày tối lành</h5>
         <p className="desc">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quaerat
-          accusamus officia
+          Công nghệ hiện đại nhất
         </p>
         <Link to="/blog/:id" className="button">
-          Read More
+          Đọc thêm
         </Link>
       </div>
     </div>

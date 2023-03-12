@@ -11,9 +11,9 @@ const SpecialProduct = () => {
               <img src="images/watch.jpg" className="img-fluid" alt="watch" />
             </div>
             <div className="special-product-content">
-              <h5 className="brand">Havels</h5>
+              <h5 className="brand">Thương hiệu sản phẩm</h5>
               <h6 className="title">
-                Samsung Galaxy Note10+ Mobile Phone; Sim...
+                Iphone 10x
               </h6>
               <ReactStars
                 count={5}
@@ -36,7 +36,7 @@ const SpecialProduct = () => {
                 </div>
               </div>
               <div className="prod-count my-3">
-                <p>Products: 5</p>
+                <p>Sản phẩm: 5</p>
                 <div className="progress">
                   <div
                     className="progress-bar"
@@ -48,7 +48,7 @@ const SpecialProduct = () => {
                   ></div>
                 </div>
               </div>
-              <Link className="button">Add to Cart</Link>
+              <Link className="button">Thêm vào giỏ hàng</Link>
             </div>
           </div>
         </div>

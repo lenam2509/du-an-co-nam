@@ -16,10 +16,10 @@ const OurStore = () => {
         <div className="row">
           <div className="col-3">
             <div className="filter-card mb-3">
-              <h3 className="filter-title">Shop By Categories</h3>
+              <h3 className="filter-title">Mua sắm theo danh mục</h3>
               <div>
                 <ul className="ps-0">
-                  <li>Watch</li>
+                  <li>Đồng hồ</li>
                   <li>Tv</li>
                   <li>Camera</li>
                   <li>Laptop</li>
@@ -27,9 +27,9 @@ const OurStore = () => {
               </div>
             </div>
             <div className="filter-card mb-3">
-              <h3 className="filter-title">Filter By</h3>
+              <h3 className="filter-title">Lọc</h3>
               <div>
-                <h5 className="sub-title">Availablity</h5>
+                <h5 className="sub-title">Khả dụng</h5>
                 <div>
                   <div className="form-check">
                     <input
@@ -39,7 +39,7 @@ const OurStore = () => {
                       id=""
                     />
                     <label className="form-check-label" htmlFor="">
-                      In Stock (1)
+                      Trong kho (1)
                     </label>
                   </div>
                   <div className="form-check">
@@ -50,11 +50,11 @@ const OurStore = () => {
                       id=""
                     />
                     <label className="form-check-label" htmlFor="">
-                      Out of Stock(0)
+                      Hết hàng (0)
                     </label>
                   </div>
                 </div>
-                <h5 className="sub-title">Price</h5>
+                <h5 className="sub-title">Giá</h5>
                 <div className="d-flex align-items-center gap-10">
                   <div className="form-floating">
                     <input
@@ -63,7 +63,7 @@ const OurStore = () => {
                       id="floatingInput"
                       placeholder="From"
                     />
-                    <label htmlFor="floatingInput">From</label>
+                    <label htmlFor="floatingInput">Từ</label>
                   </div>
                   <div className="form-floating">
                     <input
@@ -72,14 +72,14 @@ const OurStore = () => {
                       id="floatingInput1"
                       placeholder="To"
                     />
-                    <label htmlFor="floatingInput1">To</label>
+                    <label htmlFor="floatingInput1">Đến</label>
                   </div>
                 </div>
-                <h5 className="sub-title">Colors</h5>
+                <h5 className="sub-title">Màu</h5>
                 <div>
                   <Color />
                 </div>
-                <h5 className="sub-title">Size</h5>
+                <h5 className="sub-title">Kích thước</h5>
                 <div>
                   <div className="form-check">
                     <input
@@ -107,26 +107,26 @@ const OurStore = () => {
               </div>
             </div>
             <div className="filter-card mb-3">
-              <h3 className="filter-title">Product Tags</h3>
+              <h3 className="filter-title">Thẻ sản phẩm</h3>
               <div>
                 <div className="product-tags d-flex flex-wrap align-items-center gap-10">
                   <span className="badge bg-light text-secondary rounded-3 py-2 px-3">
-                    Headphone
+                    Tai nghe
                   </span>
                   <span className="badge bg-light text-secondary rounded-3 py-2 px-3">
                     Laptop
                   </span>
                   <span className="badge bg-light text-secondary rounded-3 py-2 px-3">
-                    Mobile
+                    Điện thoại
                   </span>
                   <span className="badge bg-light text-secondary rounded-3 py-2 px-3">
-                    Wire
+                    Dây
                   </span>
                 </div>
               </div>
             </div>
             <div className="filter-card mb-3">
-              <h3 className="filter-title">Random Product</h3>
+              <h3 className="filter-title">Sản phẩm ngẫu nhiên</h3>
               <div>
                 <div className="random-products mb-3 d-flex">
                   <div className="w-50">
@@ -138,7 +138,7 @@ const OurStore = () => {
                   </div>
                   <div className="w-50">
                     <h5>
-                      Kids headphones bulk 10 pack multi colored for students
+                     Tai nghe cho trẻ em
                     </h5>
                     <ReactStars
                       count={5}
@@ -160,7 +160,7 @@ const OurStore = () => {
                   </div>
                   <div className="w-50">
                     <h5>
-                      Kids headphones bulk 10 pack multi colored for students
+                     Tai nghe cho trẻ em
                     </h5>
                     <ReactStars
                       count={5}
@@ -180,7 +180,7 @@ const OurStore = () => {
               <div className="d-flex justify-content-between align-items-center">
                 <div className="d-flex align-items-center gap-10">
                   <p className="mb-0 d-block" style={{ width: "100px" }}>
-                    Sort By:
+                    Sắp xếp theo:
                   </p>
                   <select
                     name=""
@@ -188,20 +188,20 @@ const OurStore = () => {
                     className="form-control form-select"
                     id=""
                   >
-                    <option value="manual">Featured</option>
-                    <option value="best-selling">Best selling</option>
-                    <option value="title-ascending">Alphabetically, A-Z</option>
+                    <option value="manual">Đặc sắc</option>
+                    <option value="best-selling">Bán chạy nhất</option>
+                    <option value="title-ascending">Theo bảng chữ cái, A-Z</option>
                     <option value="title-descending">
-                      Alphabetically, Z-A
+                      Theo bảng chữ cái, Z-A
                     </option>
-                    <option value="price-ascending">Price, low to high</option>
-                    <option value="price-descending">Price, high to low</option>
-                    <option value="created-ascending">Date, old to new</option>
-                    <option value="created-descending">Date, new to old</option>
+                    <option value="price-ascending">Giá, thấp đến cao</option>
+                    <option value="price-descending">Giá, cao đến thấp</option>
+                    <option value="created-ascending">Ngày, cũ đến mới</option>
+                    <option value="created-descending">Ngày, mới đến cũ</option>
                   </select>
                 </div>
                 <div className="d-flex align-items-center gap-10">
-                  <p className="totalproducts mb-0">21 Products</p>
+                  <p className="totalproducts mb-0">21 Sản phẩm</p>
                   <div className="d-flex gap-10 align-items-center grid">
                     <img
                       onClick={() => {

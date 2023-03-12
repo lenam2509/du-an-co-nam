@@ -11,7 +11,7 @@ const Checkout = () => {
         <div className="row">
           <div className="col-7">
             <div className="checkout-left-data">
-              <h3 className="website-name">Dev Corner</h3>
+              <h3 className="website-name">F Shop</h3>
               <nav
                 style={{ "--bs-breadcrumb-divider": ">" }}
                 aria-label="breadcrumb"
@@ -19,7 +19,7 @@ const Checkout = () => {
                 <ol className="breadcrumb">
                   <li className="breadcrumb-item">
                     <Link className="text-dark total-price" to="/cart">
-                      Cart
+                      Giỏ hàng
                     </Link>
                   </li>
                   &nbsp; /&nbsp;
@@ -27,26 +27,26 @@ const Checkout = () => {
                     className="breadcrumb-ite total-price active"
                     aria-current="page"
                   >
-                    Information
+                    Thông tin
                   </li>
                   &nbsp; /
                   <li className="breadcrumb-item total-price active">
-                    Shipping
+                    Đang chuyển hàng
                   </li>
                   &nbsp; /
                   <li
                     className="breadcrumb-item total-price active"
                     aria-current="page"
                   >
-                    Payment
+                    Thanh toán
                   </li>
                 </ol>
               </nav>
-              <h4 className="title total">Contact Information</h4>
+              <h4 className="title total">Thông tin liên hệ</h4>
               <p className="user-details total">
-                Navdeep Dahiya (monud0232@gmail.com)
+                User demo (Fshop@gmail.com)
               </p>
-              <h4 className="mb-3">Shipping Address</h4>
+              <h4 className="mb-3">Địa chỉ giao hàng</h4>
               <form
                 action=""
                 className="d-flex gap-15 flex-wrap justify-content-between"
@@ -54,7 +54,7 @@ const Checkout = () => {
                 <div className="w-100">
                   <select name="" className="form-control form-select" id="">
                     <option value="" selected disabled>
-                      Select Country
+                     Chọn quốc gia
                     </option>
                   </select>
                 </div>
@@ -96,7 +96,7 @@ const Checkout = () => {
                 <div className="flex-grow-1">
                   <select name="" className="form-control form-select" id="">
                     <option value="" selected disabled>
-                      Select State
+                      Chọn địa phương
                     </option>
                   </select>
                 </div>
@@ -111,10 +111,10 @@ const Checkout = () => {
                   <div className="d-flex justify-content-between align-items-center">
                     <Link to="/cart" className="text-dark">
                       <BiArrowBack className="me-2" />
-                      Return to Cart
+                      Quay lại giỏ hàng
                     </Link>
                     <Link to="/cart" className="button">
-                      Continue to Shipping
+                      Tiếp tục đặt hàng
                     </Link>
                   </div>
                 </div>
@@ -146,16 +146,16 @@ const Checkout = () => {
             </div>
             <div className="border-bottom py-4">
               <div className="d-flex justify-content-between align-items-center">
-                <p className="total">Subtotal</p>
+                <p className="total">Tổng phụ</p>
                 <p className="total-price">$ 10000</p>
               </div>
               <div className="d-flex justify-content-between align-items-center">
-                <p className="mb-0 total">Shipping</p>
+                <p className="mb-0 total">Đang chuyển hàng</p>
                 <p className="mb-0 total-price">$ 10000</p>
               </div>
             </div>
             <div className="d-flex justify-content-between align-items-center border-bootom py-4">
-              <h4 className="total">Total</h4>
+              <h4 className="total">Tất cả</h4>
               <h5 className="total-price">$ 10000</h5>
             </div>
           </div>

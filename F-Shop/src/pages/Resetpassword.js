@@ -13,7 +13,7 @@ const Resetpassword = () => {
         <div className="row">
           <div className="col-12">
             <div className="auth-card">
-              <h3 className="text-center mb-3">Reset Password</h3>
+              <h3 className="text-center mb-3">Đặt lại mật khẩu</h3>
               <form action="" className="d-flex flex-column gap-15">
                 <CustomInput
                   type="password"
