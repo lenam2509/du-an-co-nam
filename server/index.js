@@ -8,6 +8,8 @@ const cors = require('cors')
 
 const authRouter = require('./routes/authRoute')
 const productsRouter = require('./routes/productsRoute')
+const brandsRouter = require('./routes/brandsRoute')
+const categoriesRouter = require('./routes/categoriesRoute')
 const { dbConnect } = require('./config/connect')
 const { notFound, errorHandler } = require('./middlewares/handler')
 
@@ -25,6 +27,8 @@ app.use(cookieParser())
 // routes
 app.use('/api/auth', authRouter)
 app.use('/api/products', productsRouter)
+app.use('/api/brands', brandsRouter)
+app.use('/api/categories', categoriesRouter)
 
 app.use(notFound)
 app.use(errorHandler)

@@ -1,33 +1,8 @@
 const mongoose = require('mongoose');
 
-const brandsSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true,
-        trim: true
-    },
-}, {
-    timestamps: true
-});
-
-const specSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    value: {
-        type: String,
-        required: true,
-        trim: true
-    }
-}, {
-    timestamps: true
-});
-
 
 const productSchema = new mongoose.Schema({
-    name: {
+    title: {
         type: String,
         required: true,
         trim: true,
@@ -41,31 +16,59 @@ const productSchema = new mongoose.Schema({
         ref: 'Brands',
         type: mongoose.Schema.Types.ObjectId,
     },
+    category: {
+        ref: 'Categories',
+        type: mongoose.Schema.Types.ObjectId,
+    },
     colors: {
         type: [String],
     },
-    image: String,
-    imagePublicId: String,
+    images: [
+        {
+            url: { type: String },
+            public_id: { type: String }
+        }
+    ],
+
+    totalRatings: {
+        type: Number,
+        default: 0
+    },
+    ratings: [
+        {
+            type: Number,
+            min: 0,
+            max: 5
+        }
+    ],
     description: {
         type: String,
         trim: true
     },
-    specs: [
-        {
-            ref: 'Specs',
-            type: mongoose.Schema.Types.ObjectId
-        }
-    ]
+    stock: {
+        type: Number,
+        required: true,
+        min: 0
+    },
+    sold: {
+        type: Number,
+        default: 0
+    },
+    specs: {
+        type: Object,
+    },
+    hot: {
+        type: Boolean,
+        default: false
+    },
 }, {
     timestamps: true
 });
 
-const Specs = mongoose.model('Specs', specSchema);
+
 const Products = mongoose.model('Products', productSchema);
-const Brands = mongoose.model('Brands', brandsSchema);
+
 
 module.exports = {
-    Products,
-    Specs,
-    Brands
+    Products
 }
